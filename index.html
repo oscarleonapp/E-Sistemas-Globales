@@ -1,93 +1,235 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sitio en Construcción - E-Sistemas Globales</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Sistemas Globales</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0a0a0a;
-      color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-      text-align: center;
-      /* padding: 20px; */
+    /* Reset & Variables */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --primary: #2d488a;
+      --secondary: #71b9d3;
+      --accent: #b84238;
+      --text-dark: #2d3748;
+      --bg-light: #f7fafc;
+      --container: 1200px;
     }
-    .logo {
-      max-width: 120px;
-      margin-bottom: 30px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      background: linear-gradient(90deg, #00ff88, #00c2ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.2rem;
-      color: #bbbbbb;
-      margin-bottom: 30px;
-    }
-    .notify-form input[type="email"] {
-      padding: 10px;
-      border: none;
-      border-radius: 4px 0 0 4px;
-      width: 250px;
-    }
-    .notify-form button {
-      padding: 10px 15px;
-      border: none;
-      background: #00ff88;
-      color: #000;
-      border-radius: 0 4px 4px 0;
-      cursor: pointer;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      color: #00ff88;
-      text-decoration: none;
-      font-size: 1.5rem;
-      transition: color 0.3s ease;
-    }
-    .social-icons a:hover {
-      color: #ffffff;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #555;
+    body { font-family: Arial, sans-serif; color: var(--text-dark); background: var(--bg-light); }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 1rem; }
+
+    /* Header */
+    header { position: fixed; top:0; width:100%; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index:1000; }
+    .nav-wrap { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+    .logo { font-size:1.5rem; font-weight:bold; color: var(--primary); }
+    nav ul { list-style: none; display: flex; gap:1rem; }
+    nav a { padding:0.5rem; transition: color 0.3s; }
+    nav a:hover { color: var(--secondary); }
+    .menu-toggle { display:none; cursor:pointer; }
+
+    /* Hero */
+    #home { padding:100px 0 4rem; text-align:center; background:#fff; }
+    #home h1 { font-size:2.5rem; margin-bottom:1rem; color: var(--primary); }
+    #home p { font-size:1.1rem; margin-bottom:2rem; }
+    .btn-main { background: var(--primary); color:#fff; padding:0.75rem 1.5rem; border:none; border-radius:4px; cursor:pointer; transition: background 0.3s; }
+    .btn-main:hover { background: var(--secondary); }
+
+    /* Sections */
+    section { padding:4rem 0; }
+    h2 { text-align:center; font-size:2rem; margin-bottom:2rem; }
+
+    /* Services */
+    .services .grid { display:grid; gap:2rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card { background:#fff; padding:1.5rem; border-radius:4px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; }
+    .btn-service { display:inline-block; margin-top:1rem; padding:0.75rem 1.5rem; background: var(--accent); color:#fff; border-radius:4px; font-weight:600; transition: background 0.3s; }
+    .btn-service:hover { background: var(--primary); }
+
+    /* About */
+    #about { background: var(--secondary); color: #fff; }
+    #about .about-content { text-align:center; max-width:800px; margin:0 auto 2rem; }
+    #about .about-content h2 { font-size:2.5rem; margin-bottom:1rem; }
+    #about .about-content p { font-size:1.1rem; margin-bottom:1.5rem; line-height:1.6; }
+    #about .features { display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; margin-bottom:2rem; }
+    #about .feature { flex:1 1 200px; text-align:left; }
+    #about .feature h4 { margin-bottom:0.5rem; }
+    #about .actions { text-align:center; }
+    #about .actions .btn-service { margin:0.5rem; }
+
+    /* Portfolio */
+    #portfolio .grid { display:grid; gap:2rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+    /* Testimonials */
+    .testimonials { display:grid; gap:2rem; grid-template-columns:1fr; }
+    .testimonial { background:#fff; padding:1.5rem; border-radius:4px; box-shadow:0 2px 6px rgba(0,0,0,0.1); font-style:italic; }
+    @media(min-width:768px) { .testimonials { grid-template-columns: repeat(2,1fr); } }
+
+    /* Blog */
+    #blog .grid { display:grid; gap:2rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+    /* Contact */
+    #contact form { display:flex; flex-direction:column; gap:1.5rem; }
+    #contact label { font-weight:600; }
+    #contact input, #contact textarea { padding:0.75rem; border:1px solid #ccc; border-radius:4px; width:100%; }
+
+    /* WhatsApp */
+    #whatsapp-float { position: fixed; right:24px; bottom:24px; background: var(--accent); border-radius:50%; padding:10px; box-shadow:0 2px 8px rgba(0,0,0,0.15); }
+
+    /* Footer */
+    footer { text-align:center; padding:2rem 0; background:#fff; }
+
+    /* Responsive Nav */
+    @media(max-width:768px) {
+      nav { position:absolute; top:60px; left:0; width:100%; background:#fff; max-height:0; overflow:hidden; transition:max-height 0.3s ease; }
+      nav.open { max-height:300px; }
+      nav ul { flex-direction:column; padding:1rem; }
+      .menu-toggle { display:block; }
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="container nav-wrap">
+      <div class="logo">E-Sistemas Globales</div>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <nav id="nav">
+        <ul>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#about">Sobre Nosotros</a></li>
+          <li><a href="#portfolio">Portafolio</a></li>
+          <li><a href="#testimonials">Testimonios</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <img src="assets/img/logo/logo-circulo.png" alt="OSCARLEON Logo" class="logo" />
+  <main>
+    <!-- Hero -->
+    <section id="home">
+      <div class="container">
+        <h1>Impulsa tu empresa con software a medida</h1>
+        <p>Optimizamos tu Inventario, Facturación, Contabilidad y Control de Gasolineras con soluciones fáciles de usar y 100% escalables.</p>
+        <button class="btn-main" onclick="scrollToSection('services')">¡Quiero una demo gratuita!</button>
+      </div>
+    </section>
 
-  <h1>Estamos construyendo algo increíble</h1>
-  <p>Muy pronto podrás acceder al nuevo sitio web de E-Sistemas Globales.</p>
+    <!-- Services -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Servicios</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Control de Inventarios Inteligente</h3>
+            <p>Gestiona tus existencias en tiempo real, evita roturas de stock y reduce pérdidas con alertas automáticas.</p>
+            <a href="#contact" class="btn-service">¡Solicita tu demo gratis!</a>
+          </div>
+          <div class="card">
+            <h3>Contabilidad Integral Simplificada</h3>
+            <p>Automatiza registros administrativos, contables y tributarios: precisión, cumplimiento legal y cero errores.</p>
+            <a href="#contact" class="btn-service">Prueba 14 días sin costo</a>
+          </div>
+          <div class="card">
+            <h3>Monitor de Procesos a Medida</h3>
+            <p>Soluciones personalizadas para registrar y supervisar cada actividad clave de tu operación.</p>
+            <a href="#contact" class="btn-service">Descubre tu solución hoy</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- <form class="notify-form">
-    <input type="email" placeholder="Tu correo electrónico" required />
-    <button type="submit">Notificarme</button>
-  </form>
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="about-content">
+          <h2>Tu aliado en transformación digital</h2>
+          <p>En ESG Petén diseñamos software a la medida para optimizar cada área crítica de tu negocio: Inventario, Facturación, Contabilidad y Control de Gasolineras.</p>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <h4>🚀 Implementación Ágil</h4>
+            <p>Despliegues rápidos y sin interrupciones para que sigas operando sin frenos.</p>
+          </div>
+          <div class="feature">
+            <h4>🤝 Soporte 24/7</h4>
+            <p>Asistencia continua para resolver cualquier consulta o incidencia al instante.</p>
+          </div>
+          <div class="feature">
+            <h4>🔄 Actualizaciones Continuas</h4>
+            <p>Mejoras constantes para mantener tu ventaja competitiva en el mercado.</p>
+          </div>
+        </div>
+        <div class="actions">
+          <a href="#contact" class="btn-service">¡Solicita tu cotización gratuita!</a>
+          <a href="tel:+50279646652" class="btn-service">Llámanos al 7964‑6652</a>
+        </div>
+      </div>
+    </section>
 
-  <div class="social-icons" style="margin-top: 30px;">
-    <a href="https://instagram.com/oscarleon.app" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://facebook.com/oscarleonapp" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://linkedin.com/in/oscarleonapp" target="_blank"><i class="fab fa-linkedin"></i></a>
-  </div> -->
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <div class="container">
+        <h2>Portafolio de Clientes</h2>
+        <div class="grid">
+          <div><img src="/client1.jpg" alt="Cliente 1"></div>
+          <div><img src="/client2.jpg" alt="Cliente 2"></div>
+          <div><img src="/client3.jpg" alt="Cliente 3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <div class="container">
+        <h2>Testimonios</h2>
+        <div class="testimonials">
+          <div class="testimonial">"Excelente trabajo, aumentaron nuestras conversiones un 40%."<br><strong>- Juan P. CEO</strong></div>
+          <div class="testimonial">"Su enfoque integral nos ayudó a crecer de manera sustentable."<br><strong>- María L. Directora Marketing</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog">
+      <div class="container">
+        <h2>Blog y Noticias</h2>
+        <div class="grid">
+          <div class="card"><h3>Título de Post 1</h3><p>Resumen breve del post para atraer clics.</p><a href="#">Leer más →</a></div>
+          <div class="card"><h3>Título de Post 2</h3><p>Resumen breve del post para atraer clics.</p><a href="#">Leer más →</a></div>
+          <div class="card"><h3>Título de Post 3</h3><p>Resumen breve del post para atraer clics.</p><a href="#">Leer más →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" id="whatsapp-float" aria-label="Chatea por WhatsApp">
+      <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/whatsapp.svg" alt="WhatsApp" style="width:48px;height:48px;">
+    </a>
+  </main>
 
   <footer>
-    &copy; 2025 E-Sistemas Globales. Todos los derechos reservados. <br> Diseño y desarrollo por <a href="https://oscarleon.app" target="_blank" style="color: #00ff88;">OSCARLEON</a>.
+    &copy; <span id="year"></span> E-Sistemas Globales. Todos los derechos reservados.
   </footer>
 
+  <script>
+    // Toggle mobile nav
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    menuToggle.addEventListener('click', () => nav.classList.toggle('open'));
+    // Smooth scroll
+    function scrollToSection(id) {
+      document.querySelector('#'+id).scrollIntoView({ behavior: 'smooth' });
+      nav.classList.remove('open');
+    }
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Form handler
+    function submitForm(e) {
+      e.preventDefault(); alert('¡Gracias! Tu mensaje ha sido enviado.'); e.target.reset();
+    }
+  </script>
 </body>
 </html>
