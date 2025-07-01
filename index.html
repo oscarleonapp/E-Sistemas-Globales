@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-Sistemas Globales</title>
+  <title>E‑Sistemas Globales</title>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   <style>
-    /* Reset & Variables */
-    * { margin:0; padding:0; box-sizing:border-box; }
+    /* ---------- Reset & Variables base ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     :root {
       --primary: #2d488a;
       --secondary: #71b9d3;
@@ -15,84 +23,488 @@
       --bg-light: #f7fafc;
       --container: 1200px;
     }
-    body { font-family: Arial, sans-serif; color: var(--text-dark); background: var(--bg-light); }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
-    .container { max-width: var(--container); margin: 0 auto; padding: 0 1rem; }
 
-    /* Header */
-    header { position: fixed; top:0; width:100%; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index:1000; }
-    .nav-wrap { display: flex; justify-content: space-between; align-items: center; height: 60px; }
-    .logo { font-size:1.5rem; font-weight:bold; color: var(--primary); }
-    nav ul { list-style: none; display: flex; gap:1rem; }
-    nav a { padding:0.5rem; transition: color 0.3s; }
-    nav a:hover { color: var(--secondary); }
-    .menu-toggle { display:none; cursor:pointer; }
+    /* ---------- Dark‑mode overrides ---------- */
+    body.dark {
+      --primary: #90cdf4;
+      --secondary: #2b6cb0;
+      --accent: #f56565;
+      --text-dark: #e2e8f0;
+      --bg-light: #1a202c;
+    }
 
-    /* Hero */
-    #home { padding:100px 0 4rem; text-align:center; background:#fff; }
-    #home h1 { font-size:2.5rem; margin-bottom:1rem; color: var(--primary); }
-    #home p { font-size:1.1rem; margin-bottom:2rem; }
-    .btn-main { background: var(--primary); color:#fff; padding:0.75rem 1.5rem; border:none; border-radius:4px; cursor:pointer; transition: background 0.3s; }
-    .btn-main:hover { background: var(--secondary); }
+    /* ---------- Base styles ---------- */
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--text-dark);
+      background: var(--bg-light);
+      transition: background .3s, color .3s;
+    }
 
-    /* Sections */
-    section { padding:4rem 0; }
-    h2 { text-align:center; font-size:2rem; margin-bottom:2rem; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+      z-index: 1000;
+      transition: background .3s;
+    }
+
+    body.dark header {
+      background: #2d3748;
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      padding: .5rem;
+      transition: color .3s;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 1.6rem;
+    }
+
+    /* Dark‑mode / light‑mode toggle button */
+    #theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--primary);
+      transition: color .3s;
+    }
+
+    body.dark #theme-toggle {
+      color: var(--text-dark);
+    }
+
+    /* ---------- Hero ---------- */
+    #home {
+      padding: 100px 0 4rem;
+      text-align: center;
+      /* background: #fff; */
+      transition: background .3s;
+    }
+
+    body.dark #home {
+      background: #2d3748;
+    }
+
+    #home h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    #home p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn-main {
+      background: var(--primary);
+      color: #fff;
+      padding: .75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background .3s;
+    }
+
+    .btn-main:hover {
+      background: var(--secondary);
+    }
+
+    /* ---------- Sections ---------- */
+    section {
+      padding: 4rem 0;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
 
     /* Services */
-    .services .grid { display:grid; gap:2rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .card { background:#fff; padding:1.5rem; border-radius:4px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; }
-    .btn-service { display:inline-block; margin-top:1rem; padding:0.75rem 1.5rem; background: var(--accent); color:#fff; border-radius:4px; font-weight:600; transition: background 0.3s; }
-    .btn-service:hover { background: var(--primary); }
+/* ---- GRID ---- */
+.services .grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
 
-    /* About */
-    #about { background: var(--secondary); color: #fff; }
-    #about .about-content { text-align:center; max-width:800px; margin:0 auto 2rem; }
-    #about .about-content h2 { font-size:2.5rem; margin-bottom:1rem; }
-    #about .about-content p { font-size:1.1rem; margin-bottom:1.5rem; line-height:1.6; }
-    #about .features { display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; margin-bottom:2rem; }
-    #about .feature { flex:1 1 200px; text-align:left; }
-    #about .feature h4 { margin-bottom:0.5rem; }
-    #about .actions { text-align:center; }
-    #about .actions .btn-service { margin:0.5rem; }
+/* ---- CARD ---- */
+.card {
+  background: #111;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.35);
+}
+
+/* ---- ICONO ---- */
+.card-icon {
+  font-size: 3rem;     /* Tamaño */
+  color: #00d084;      /* Verde OSCARLEON */
+  margin-bottom: 1rem;
+  display: inline-block;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.4));
+}
+
+    .btn-service {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: .75rem 1.5rem;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background .3s;
+    }
+
+    .btn-service:hover {
+      background: var(--primary);
+    }
+
+/* ---- ABOUT ---- */
+.about{
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg,#0e1c24 0%,#000 60%);
+  color:#fff;
+  overflow: hidden;
+}
+.about__wrapper{
+  max-width: 1200px;
+  margin:0 auto;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  align-items: center;
+}
+.about__content h2{
+  font-size: clamp(1.8rem,4vw + .5rem,2.8rem);
+  margin-bottom: 1rem;
+}
+.about__content p{margin-bottom:2rem;font-size:1.05rem;line-height:1.6}
+
+/* ---- FEATURE CARDS ---- */
+.features{
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  margin-bottom: 2.5rem;
+}
+.feature{
+  background:#111;
+  border-radius: .75rem;
+  padding:1.5rem;
+  text-align:center;
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.feature:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 24px rgba(0,0,0,.45);
+}
+.feature i{
+  font-size: 2.4rem;
+  color:#00d084;
+  display:block;
+  margin-bottom:.8rem;
+}
+
+/* ---- CTA BUTTONS ---- */
+.btn-cta,.btn-ghost{
+  display:inline-block;
+  padding:.9rem 2.2rem;
+  border-radius:.5rem;
+  font-weight:600;
+  transition:transform .25s ease;
+  margin-right: .8rem;
+  text-align:center;
+}
+.btn-cta{
+  background:#00d084;
+  color:#fff;
+}
+.btn-ghost{
+  border:2px solid #00d084;
+  color:#00d084;
+}
+.btn-cta:hover,.btn-ghost:hover{transform:translateY(-4px)}
+
+/* ---- IMAGE ---- */
+.about__img img{
+  width:100%;
+  border-radius:1rem;
+  object-fit:cover;
+  box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+
+/* ---- RESPONSIVE ADJUSTMENTS ---- */
+@media(max-width:768px){
+  .about{padding:3rem 1rem}
+  .features{grid-template-columns:1fr}
+}
+
+    
 
     /* Portfolio */
-    #portfolio .grid { display:grid; gap:2rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    #portfolio .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
 
     /* Testimonials */
-    .testimonials { display:grid; gap:2rem; grid-template-columns:1fr; }
-    .testimonial { background:#fff; padding:1.5rem; border-radius:4px; box-shadow:0 2px 6px rgba(0,0,0,0.1); font-style:italic; }
-    @media(min-width:768px) { .testimonials { grid-template-columns: repeat(2,1fr); } }
+    .testimonials {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr;
+    }
+
+    .testimonial {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+      font-style: italic;
+    }
+
+    @media(min-width:768px) {
+      .testimonials {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
     /* Blog */
-    #blog .grid { display:grid; gap:2rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    #blog .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
 
     /* Contact */
-    #contact form { display:flex; flex-direction:column; gap:1.5rem; }
-    #contact label { font-weight:600; }
-    #contact input, #contact textarea { padding:0.75rem; border:1px solid #ccc; border-radius:4px; width:100%; }
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    #contact label {
+      font-weight: 600;
+    }
+
+    #contact input,
+    #contact textarea {
+      padding: .75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+    }
 
     /* WhatsApp */
-    #whatsapp-float { position: fixed; right:24px; bottom:24px; background: var(--accent); border-radius:50%; padding:10px; box-shadow:0 2px 8px rgba(0,0,0,0.15); }
+    #whatsapp-float {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      background:#25d366;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+    }
 
     /* Footer */
-    footer { text-align:center; padding:2rem 0; background:#fff; }
-
-    /* Responsive Nav */
-    @media(max-width:768px) {
-      nav { position:absolute; top:60px; left:0; width:100%; background:#fff; max-height:0; overflow:hidden; transition:max-height 0.3s ease; }
-      nav.open { max-height:300px; }
-      nav ul { flex-direction:column; padding:1rem; }
-      .menu-toggle { display:block; }
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background: #fff;
+      transition: background .3s;
     }
+
+    body.dark footer {
+      background: #2d3748;
+    }
+
+    /* ---------- Responsive nav ---------- */
+    @media(max-width:768px) {
+      nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s ease;
+      }
+
+      body.dark nav {
+        background: #2d3748;
+      }
+
+      nav.open {
+        max-height: 300px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      #theme-toggle {
+        margin-left: 1rem;
+      }
+    }
+
+      /* ---- HERO ---- */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;      /* Centrado vertical */
+    justify-content: center;  /* Centrado horizontal */
+    text-align: center;
+    padding: 0 1rem;          /* Espacio lateral en móviles */
+    background: url("assets/img/backgrounds/6.jpg") center / cover no-repeat;
+    position: relative;
+  }
+
+  /* Opcional: capa de oscurecimiento para mayor legibilidad del texto */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  .hero__content {
+    position: relative;       /* Asegura que esté sobre el overlay */
+    max-width: 60rem;         /* Controla el ancho del bloque */
+    color: #fff;              /* Texto blanco sobre fondo oscuro */
+  }
+
+  .hero__content h1 {
+    font-size: clamp(2rem, 5vw + 1rem, 3.5rem); /* Responsivo */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero__content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn-main {
+    padding: 0.9rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background: #00d084;          /* Verde OSCARLEON */
+    color: #fff;
+    transition: transform 0.2s ease;
+  }
+
+  .btn-main:hover {
+    transform: translateY(-3px);
+  }
+
+  /* ------------ Tarjetas de servicio ------------ */
+.services .grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: #707070;          /* Fondo oscuro consistente con tu branding */
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.1);
+}
+
+/* Icono */
+.card-icon {
+  width: 64px;               /* Ajusta tamaño a tu gusto */
+  height: 64px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.1));
+}
   </style>
 </head>
+
 <body>
+
   <header>
     <div class="container nav-wrap">
-      <div class="logo">E-Sistemas Globales</div>
-      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="logo">E‑Sistemas Globales</div>
+
+      <!-- Controles de navegación y tema -->
+      <div style="display:flex;align-items:center;gap:.75rem;">
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <button id="theme-toggle" aria-label="Cambiar modo claro/oscuro">🌓</button>
+      </div>
+
       <nav id="nav">
         <ul>
           <li><a href="#home">Inicio</a></li>
@@ -108,75 +520,285 @@
   </header>
 
   <main>
-    <!-- Hero -->
-    <section id="home">
-      <div class="container">
-        <h1>Impulsa tu empresa con software a medida</h1>
-        <p>Optimizamos tu Inventario, Facturación, Contabilidad y Control de Gasolineras con soluciones fáciles de usar y 100% escalables.</p>
-        <button class="btn-main" onclick="scrollToSection('services')">¡Quiero una demo gratuita!</button>
-      </div>
-    </section>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero__content">
+    <h1 style="color: white;">Impulsa tu empresa con software a medida</h1>
+    <p>
+      Optimizamos tu Inventario, Facturación, Contabilidad y Control de Gasolineras
+      con soluciones fáciles de usar y&nbsp;100 % escalables.
+    </p>
+    <a class="btn-main pulse" href="https://wa.me/50238339762?text=Hola%2C%20quiero%20contactar%20con%20servicio%20al%20cliente%20de%20E-Sistemas%20Globales" target="_blank" rel="noopener">
+      ¡Contactar con servicio al cliente!
+    </a>
+    <style>
+      .pulse {
+        animation: pulse 1.2s infinite;
+        box-shadow: 0 0 0 0 rgba(0,208,132,0.7);
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(0,208,132,0.7);
+        }
+        70% {
+          transform: scale(1.06);
+          box-shadow: 0 0 0 12px rgba(0,208,132,0);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(0,208,132,0);
+        }
+      }
+    </style>
+  </div>
+</section>
 
     <!-- Services -->
-    <section id="services" class="services">
-      <div class="container">
-        <h2>Servicios</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Control de Inventarios Inteligente</h3>
-            <p>Gestiona tus existencias en tiempo real, evita roturas de stock y reduce pérdidas con alertas automáticas.</p>
-            <a href="#contact" class="btn-service">¡Solicita tu demo gratis!</a>
-          </div>
-          <div class="card">
-            <h3>Contabilidad Integral Simplificada</h3>
-            <p>Automatiza registros administrativos, contables y tributarios: precisión, cumplimiento legal y cero errores.</p>
-            <a href="#contact" class="btn-service">Prueba 14 días sin costo</a>
-          </div>
-          <div class="card">
-            <h3>Monitor de Procesos a Medida</h3>
-            <p>Soluciones personalizadas para registrar y supervisar cada actividad clave de tu operación.</p>
-            <a href="#contact" class="btn-service">Descubre tu solución hoy</a>
-          </div>
-        </div>
+<section id="services" class="services">
+  <div class="container">
+    <h2>Servicios</h2>
+
+    <div class="grid">
+      <div class="card">
+        <i class="bi bi-box-seam card-icon" aria-hidden="true"></i>
+        <h3>Control de Inventarios Inteligente</h3>
+        <p>Gestiona tus existencias en tiempo real, evita roturas de stock y reduce pérdidas con alertas automáticas.</p>
+        <a href="https://wa.me/50238339762?text=Hola%2C%20quiero%20solicitar%20una%20demo%20gratis%20del%20Control%20de%20Inventarios%20Inteligente" class="btn-service" target="_blank" rel="noopener">¡Solicita tu demo gratis!</a>
       </div>
-    </section>
+
+      <div class="card">
+        <i class="bi bi-cash-stack card-icon" aria-hidden="true"></i>
+        <h3>Contabilidad Integral Simplificada</h3>
+        <p>Automatiza registros administrativos, contables y tributarios para un cumplimiento legal sin errores.</p>
+        <a href="https://wa.me/50238339762?text=me%20gustar%C3%ADa%20tener%20la%20prueba%20gratis%20de%2014%20d%C3%ADas%20de%20Contabilidad%20Integral%20Simplificada" class="btn-service" target="_blank" rel="noopener">Prueba 14 días sin costo</a>
+      </div>
+
+      <div class="card">
+        <i class="bi bi-graph-up-arrow card-icon" aria-hidden="true"></i>
+        <h3>Monitor de Procesos a Medida</h3>
+        <p>Soluciones personalizadas para registrar y supervisar cada actividad clave de tu operación.</p>
+        <a href="https://wa.me/50238339762?text=Necesito%20informaci%C3%B3n%20de%20sus%20servicios%20para%20una%20soluci%C3%B3n%20a%20la%20medida" class="btn-service" target="_blank" rel="noopener">Descubre tu solución hoy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- About -->
-    <section id="about">
-      <div class="container">
-        <div class="about-content">
-          <h2>Tu aliado en transformación digital</h2>
-          <p>En ESG Petén diseñamos software a la medida para optimizar cada área crítica de tu negocio: Inventario, Facturación, Contabilidad y Control de Gasolineras.</p>
+<section id="about" class="about">
+  <div class="about__wrapper">
+    <!-- Columna texto -->
+    <div class="about__content">
+      <h2>Tu aliado en transformación digital</h2>
+      <p>En <strong>ESG Petén</strong> diseñamos software a la medida para optimizar cada área crítica de tu negocio:
+         Inventario, Facturación, Contabilidad y Control de Gasolineras.</p>
+
+      <div class="features">
+        <div class="feature">
+          <i class="bi bi-rocket-takeoff"></i>
+          <h4>Implementación Ágil</h4>
+          <p>Despliegues rápidos y sin interrupciones para que sigas operando sin frenos.</p>
         </div>
-        <div class="features">
-          <div class="feature">
-            <h4>🚀 Implementación Ágil</h4>
-            <p>Despliegues rápidos y sin interrupciones para que sigas operando sin frenos.</p>
-          </div>
-          <div class="feature">
-            <h4>🤝 Soporte 24/7</h4>
-            <p>Asistencia continua para resolver cualquier consulta o incidencia al instante.</p>
-          </div>
-          <div class="feature">
-            <h4>🔄 Actualizaciones Continuas</h4>
-            <p>Mejoras constantes para mantener tu ventaja competitiva en el mercado.</p>
-          </div>
+        <div class="feature">
+          <i class="bi bi-headset"></i>
+          <h4>Soporte 24/7</h4>
+          <p>Asistencia continua para resolver cualquier consulta o incidencia al instante.</p>
         </div>
-        <div class="actions">
-          <a href="#contact" class="btn-service">¡Solicita tu cotización gratuita!</a>
-          <a href="tel:+50279646652" class="btn-service">Llámanos al 7964‑6652</a>
+        <div class="feature">
+          <i class="bi bi-arrow-repeat"></i>
+          <h4>Actualizaciones Continuas</h4>
+          <p>Mejoras constantes para mantener tu ventaja competitiva en el mercado.</p>
+        </div>
+          <div class="feature">
+          <i class="bi bi-arrow-repeat"></i>
+          <h4>Actualizaciones Continuas</h4>
+          <p>Mejoras constantes para mantener tu ventaja competitiva en el mercado.</p>
         </div>
       </div>
-    </section>
+
+      <div class="actions">
+        <a href="#contact" class="btn-cta">¡Solicita tu cotización gratuita!</a>
+        <a href="tel:+50279646652" class="btn-ghost">Llámanos al 7964‑6652</a>
+      </div>
+    </div>
+
+    <!-- Columna imagen (puedes cambiar la URL por una propia) -->
+    <div class="about__img">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/EuyAAPx21Cs?autoplay=1&mute=1&loop=1&playlist=EuyAAPx21Cs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="border-radius:1rem;box-shadow:0 8px 20px rgba(0,0,0,.35);"></iframe>
+    </div>
+  </div>
+</section>
 
     <!-- Portfolio -->
     <section id="portfolio">
       <div class="container">
         <h2>Portafolio de Clientes</h2>
-        <div class="grid">
-          <div><img src="/client1.jpg" alt="Cliente 1"></div>
-          <div><img src="/client2.jpg" alt="Cliente 2"></div>
-          <div><img src="/client3.jpg" alt="Cliente 3"></div>
+        <!-- Filtros -->
+        <div id="portfolio-filters" style="text-align:center;margin-bottom:2rem;">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="software">Software Empresarial</button>
+          <button class="filter-btn" data-filter="gasolineras">Gasolineras</button>
+          <button class="filter-btn" data-filter="contabilidad">Contabilidad</button>
+        </div>
+        <div class="grid" id="portfolio-grid">
+          <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/01.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Sistemas Globales</h4>
+            <p style="font-size:0.95rem;color:#444;">Soluciones integrales de software empresarial para gestión y control.</p>
+          </div>
+          <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/01.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Sistemas Globales</h4>
+            <p style="font-size:0.95rem;color:#444;">Soluciones integrales de software empresarial para gestión y control.</p>
+          </div>
+          <div class="portfolio-item" data-category="contabilidad">
+            <img src="assets/img/clientes/01.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Sistemas Globales</h4>
+            <p style="font-size:0.95rem;color:#444;">Soluciones integrales de software empresarial para gestión y control.</p>
+          </div>
+          <div class="portfolio-item" data-category="gasolineras">
+            <img src="assets/img/clientes/01.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Sistemas Globales</h4>
+            <p style="font-size:0.95rem;color:#444;">Soluciones integrales de software empresarial para gestión y control.</p>
+          </div>
+          <div class="portfolio-item" data-category="gasolineras">
+            <img src="assets/img/clientes/02.jpg" alt="Cliente 2">
+          </div>
+          <div class="portfolio-item" data-category="contabilidad">
+            <img src="assets/img/clientes/03.jpg" alt="Cliente 3">
+          </div>
+          <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/04.jpg" alt="Cliente 4">
+          </div>
+          <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/01.jpg" alt="Sistemas Globales - Cliente 1">
+          </div>
+          <div class="portfolio-item" data-category="gasolineras">
+            <img src="assets/img/clientes/02.jpg" alt="Cliente 2">
+          </div>
+          <div class="portfolio-item" data-category="contabilidad">
+            <img src="assets/img/clientes/03.jpg" alt="Cliente 3">
+          </div>
+          <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/04.jpg" alt="Cliente 4">
+          </div>
+          <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/01.jpg" alt="Sistemas Globales - Cliente 1">
+          </div>
+          <div class="portfolio-item" data-category="contabilidad">
+            <img src="assets/img/clientes/02.jpg" alt="Cliente 2">
+          </div>
+          <div class="portfolio-item" data-category="gasolineras">
+            <img src="assets/img/clientes/03.jpg" alt="Cliente 3">
+          </div>
+          <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/04.jpg" alt="Cliente 4">
+          </div>
+        </div>
+      </div>
+      <style>
+        #portfolio-filters .filter-btn {
+          background: #eee;
+          border: none;
+          padding: 0.6rem 1.3rem;
+          margin: 0 0.3rem 0.5rem 0;
+          border-radius: 2rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: background .2s, color .2s;
+          color: var(--primary);
+        }
+        #portfolio-filters .filter-btn.active,
+        #portfolio-filters .filter-btn:hover {
+          background: var(--primary);
+          color: #fff;
+        }
+        .portfolio-item {
+          transition: opacity .2s, transform .2s;
+        }
+        .portfolio-item[hidden] {
+          display: none !important;
+        }
+      </style>
+      <script>
+        // Filtros de portafolio
+        document.addEventListener('DOMContentLoaded', function () {
+          const filterBtns = document.querySelectorAll('#portfolio-filters .filter-btn');
+          const items = document.querySelectorAll('#portfolio-grid .portfolio-item');
+          filterBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+              filterBtns.forEach(b => b.classList.remove('active'));
+              this.classList.add('active');
+              const filter = this.getAttribute('data-filter');
+              items.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                  item.hidden = false;
+                } else {
+                  item.hidden = true;
+                }
+              });
+            });
+          });
+        });
+      </script>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" style="background: var(--bg-light);">
+      <div class="container">
+        <h2>Preguntas Frecuentes</h2>
+        <div style="max-width:700px;margin:0 auto;">
+          <details style="margin-bottom:1.2rem;">
+            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
+              <img src="assets/img/clientes/01.jpg" alt="" style="width:28px;height:28px;">
+              ¿Qué tipo de software desarrollan?
+            </summary>
+            <div>
+              <p>Desarrollamos soluciones a medida para inventario, facturación, contabilidad y control de gasolineras, adaptándonos a las necesidades de cada cliente.</p>
+              <button class="btn-ghost" onclick="alert('Contáctanos para más información sobre nuestros desarrollos a medida.')">Leer más</button>
+            </div>
+          </details>
+          <details style="margin-bottom:1.2rem;">
+            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
+              <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/support.svg" alt="" style="width:28px;height:28px;">
+              ¿Ofrecen soporte técnico?
+            </summary>
+            <div>
+              <p>Sí, brindamos soporte 24/7 para resolver cualquier consulta o incidencia rápidamente.</p>
+              <button class="btn-ghost" onclick="alert('Nuestro soporte está disponible por teléfono, WhatsApp y correo electrónico.')">Leer más</button>
+            </div>
+          </details>
+          <details style="margin-bottom:1.2rem;">
+            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
+              <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/eye.svg" alt="" style="width:28px;height:28px;">
+              ¿Puedo solicitar una demo gratuita?
+            </summary>
+            <div>
+              <p>¡Por supuesto! Contáctanos y agenda una demostración sin costo de nuestras soluciones.</p>
+              <button class="btn-ghost" onclick="window.open('https://wa.me/50238339762?text=Quiero%20una%20demo%20gratuita', '_blank')">Leer más</button>
+            </div>
+          </details>
+          <details style="margin-bottom:1.2rem;">
+            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
+              <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/growth.svg" alt="" style="width:28px;height:28px;">
+              ¿El software es escalable?
+            </summary>
+            <div>
+              <p>Sí, nuestras plataformas crecen junto a tu empresa y se adaptan a nuevos requerimientos.</p>
+              <button class="btn-ghost" onclick="alert('Consulta casos de éxito de empresas que han escalado con nosotros.')">Leer más</button>
+            </div>
+          </details>
+          <details>
+            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
+              <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/contact.svg" alt="" style="width:28px;height:28px;">
+              ¿Cómo solicito una cotización?
+            </summary>
+            <div>
+              <p>Puedes usar el formulario de contacto, escribirnos por WhatsApp o llamarnos directamente. ¡Te responderemos pronto!</p>
+              <button class="btn-ghost" onclick="window.location.href='#contact'">Leer más</button>
+            </div>
+          </details>
         </div>
       </div>
     </section>
@@ -186,8 +808,10 @@
       <div class="container">
         <h2>Testimonios</h2>
         <div class="testimonials">
-          <div class="testimonial">"Excelente trabajo, aumentaron nuestras conversiones un 40%."<br><strong>- Juan P. CEO</strong></div>
-          <div class="testimonial">"Su enfoque integral nos ayudó a crecer de manera sustentable."<br><strong>- María L. Directora Marketing</strong></div>
+          <div class="testimonial">"Excelente trabajo, aumentaron nuestras conversiones un 40 %."<br><strong>- Juan P.,
+              CEO</strong></div>
+          <div class="testimonial">"Su enfoque integral nos ayudó a crecer de manera sustentable."<br><strong>-
+              María L., Directora de Marketing</strong></div>
         </div>
       </div>
     </section>
@@ -195,41 +819,75 @@
     <!-- Blog -->
     <section id="blog">
       <div class="container">
-        <h2>Blog y Noticias</h2>
+        <h2>Lo más reciente de nosotros</h2>
         <div class="grid">
-          <div class="card"><h3>Título de Post 1</h3><p>Resumen breve del post para atraer clics.</p><a href="#">Leer más →</a></div>
-          <div class="card"><h3>Título de Post 2</h3><p>Resumen breve del post para atraer clics.</p><a href="#">Leer más →</a></div>
-          <div class="card"><h3>Título de Post 3</h3><p>Resumen breve del post para atraer clics.</p><a href="#">Leer más →</a></div>
+          <div class="card">
+            <img src="assets/img/clientes/01.jpg" alt="Imagen del Post 1" style="width:100%;border-radius:0.5rem 0.5rem 0 0;margin-bottom:1rem;">
+            <h3>Título de Post 1</h3>
+            <p>Resumen breve del post para atraer clics.</p>
+            <a href="#">Leer más&nbsp;→</a>
+          </div>
+          <div class="card">
+            <img src="assets/img/clientes/02.jpg" alt="Imagen del Post 2" style="width:100%;border-radius:0.5rem 0.5rem 0 0;margin-bottom:1rem;">
+            <h3>Título de Post 2</h3>
+            <p>Resumen breve del post para atraer clics.</p>
+            <a href="#">Leer más&nbsp;→</a>
+          </div>
+          <div class="card">
+            <img src="assets/img/clientes/03.jpg" alt="Imagen del Post 3" style="width:100%;border-radius:0.5rem 0.5rem 0 0;margin-bottom:1rem;">
+            <h3>Título de Post 3</h3>
+            <p>Resumen breve del post para atraer clics.</p>
+            <a href="#">Leer más&nbsp;→</a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- WhatsApp -->
-    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" id="whatsapp-float" aria-label="Chatea por WhatsApp">
-      <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/whatsapp.svg" alt="WhatsApp" style="width:48px;height:48px;">
+    <a href="https://wa.me/50238339762?text=Me%20pueden%20brindar%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios" target="_blank" id="whatsapp-float" aria-label="Chatea por WhatsApp">
+      <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/whatsapp.svg" alt="WhatsApp"
+      style="width:48px;height:48px;">
     </a>
   </main>
 
   <footer>
-    &copy; <span id="year"></span> E-Sistemas Globales. Todos los derechos reservados.
+    &copy; <span id="year"></span> E‑Sistemas Globales. Todos los derechos reservados.
   </footer>
 
   <script>
-    // Toggle mobile nav
+    /* ---------- Navegación móvil ---------- */
     const menuToggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('nav');
     menuToggle.addEventListener('click', () => nav.classList.toggle('open'));
-    // Smooth scroll
+
+    /* ---------- Scroll suave ---------- */
     function scrollToSection(id) {
-      document.querySelector('#'+id).scrollIntoView({ behavior: 'smooth' });
+      document.querySelector('#' + id).scrollIntoView({ behavior: 'smooth' });
       nav.classList.remove('open');
     }
-    // Dynamic year
+
+    /* ---------- Año dinámico ---------- */
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Form handler
+
+    /* ---------- Modo oscuro ---------- */
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const storedTheme = localStorage.getItem('theme');
+    if ((storedTheme === 'dark') || (!storedTheme && prefersDark)) {
+      document.body.classList.add('dark');
+    }
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    /* ---------- Ejemplo de envío de formulario ---------- */
     function submitForm(e) {
-      e.preventDefault(); alert('¡Gracias! Tu mensaje ha sido enviado.'); e.target.reset();
+      e.preventDefault();
+      alert('¡Gracias! Tu mensaje ha sido enviado.');
+      e.target.reset();
     }
   </script>
 </body>
+
 </html>
