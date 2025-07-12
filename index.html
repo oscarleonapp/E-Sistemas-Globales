@@ -310,6 +310,17 @@
     .btn-ghost:hover {
       transform: translateY(-4px)
     }
+    .btn-ver-mas {
+      display:inline-block;
+      margin-top:1rem;
+      padding:.75rem 1.5rem;
+      background: var(--primary);
+      color:#fff;
+      border-radius:4px;
+    }
+    .btn-ver-mas:hover {
+      background: var(--secondary);
+    }
 
     /* ---- IMAGE ---- */
     .about__img img {
@@ -895,72 +906,110 @@
     <section id="faq" style="background: var(--bg-light);">
       <div class="container">
         <h2>Preguntas Frecuentes</h2>
-        <div style="max-width:700px;margin:0 auto;">
+          <div style="max-width:700px;margin:0 auto;">
           <details style="margin-bottom:1.2rem;">
             <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
               <img src="assets/img/clientes/01.jpg" alt="" style="width:28px;height:28px;">
-              ¿Qué tipo de software desarrollan?
+              ¿Cómo creo un nuevo cliente según su tipo de documento (NIT, CF, DPI)?
             </summary>
             <div>
-              <p>Desarrollamos soluciones a medida para inventario, facturación, contabilidad y control de gasolineras,
-                adaptándonos a las necesidades de cada cliente.</p>
-              <button class="btn-ghost"
-                onclick="alert('Contáctanos para más información sobre nuestros desarrollos a medida.')">Leer
-                más</button>
+              <p>Puedes registrar clientes usando NIT, CF o DPI, según el tipo de identificación del comprador. Cada opción tiene pasos distintos.</p>
+              <a href="faq/crear-cliente.html" class="btn-ghost">Leer más</a>
             </div>
           </details>
           <details style="margin-bottom:1.2rem;">
             <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/support.svg" alt=""
-                style="width:28px;height:28px;">
-              ¿Ofrecen soporte técnico?
+              <img src="assets/img/clientes/01.jpg" alt="" style="width:28px;height:28px;">
+              ¿Cómo registro correctamente una compra en SIP5 WEB?
             </summary>
             <div>
-              <p>Sí, brindamos soporte 24/7 para resolver cualquier consulta o incidencia rápidamente.</p>
-              <button class="btn-ghost"
-                onclick="alert('Nuestro soporte está disponible por teléfono, WhatsApp y correo electrónico.')">Leer
-                más</button>
+              <p>Las compras se ingresan desde el módulo correspondiente, detallando proveedor, factura y productos comprados.</p>
+              <a href="faq/registro-compras.html" class="btn-ghost">Leer más</a>
             </div>
           </details>
           <details style="margin-bottom:1.2rem;">
             <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/eye.svg" alt=""
-                style="width:28px;height:28px;">
-              ¿Puedo solicitar una demo gratuita?
+              <img src="assets/img/clientes/01.jpg" alt="" style="width:28px;height:28px;">
+              ¿Cuál es el proceso para crear un producto en el sistema SIP5 WEB?
             </summary>
             <div>
-              <p>¡Por supuesto! Contáctanos y agenda una demostración sin costo de nuestras soluciones.</p>
-              <button class="btn-ghost"
-                onclick="window.open('https://wa.me/50238339762?text=Quiero%20una%20demo%20gratuita', '_blank')">Leer
-                más</button>
+              <p>Debes llenar datos básicos como código, nombre, presentación y precios. Asegúrate de tener proveedor y categoría creados.</p>
+              <a href="faq/crear-producto.html" class="btn-ghost">Leer más</a>
             </div>
           </details>
           <details style="margin-bottom:1.2rem;">
             <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/growth.svg" alt=""
-                style="width:28px;height:28px;">
-              ¿El software es escalable?
+              <img src="assets/img/clientes/01.jpg" alt="" style="width:28px;height:28px;">
+              ¿Dónde consulto y descargo el libro de ventas y compras?
             </summary>
             <div>
-              <p>Sí, nuestras plataformas crecen junto a tu empresa y se adaptan a nuevos requerimientos.</p>
-              <button class="btn-ghost"
-                onclick="alert('Consulta casos de éxito de empresas que han escalado con nosotros.')">Leer más</button>
+              <p>Ve al menú de reportes para visualizar ambos libros, filtra por fecha y descarga el informe de ventas o compras.</p>
+              <a href="faq/libro-ventas-compras.html" class="btn-ghost">Leer más</a>
             </div>
           </details>
-          <details>
+          <details style="margin-bottom:1.2rem;">
             <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/contact.svg" alt=""
-                style="width:28px;height:28px;">
-              ¿Cómo solicito una cotización?
+              <img src="assets/img/clientes/01.jpg" alt="" style="width:28px;height:28px;">
+              ¿Cómo puedo modificar un turno cerrado por error?
             </summary>
             <div>
-              <p>Puedes usar el formulario de contacto, escribirnos por WhatsApp o llamarnos directamente. ¡Te
-                responderemos pronto!</p>
-              <button class="btn-ghost" onclick="window.location.href='#contact'">Leer más</button>
+              <p>Solo usuarios con permisos de gerencia pueden editar un turno desde el historial y guardar los cambios necesarios.</p>
+              <a href="faq/modificar-turno.html" class="btn-ghost">Leer más</a>
             </div>
           </details>
-        </div>
+          <details style="margin-bottom:1.2rem;">
+            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
+              <img src="assets/img/clientes/01.jpg" alt="" style="width:28px;height:28px;">
+              ¿Qué pasos debo seguir para realizar el cierre de un turno correctamente?
+            </summary>
+            <div>
+              <p>Ingresa los datos del día como efectivo, POS y cheques, y guarda el cierre desde el módulo correspondiente.</p>
+              <a href="faq/cierre-turno.html" class="btn-ghost">Leer más</a>
+            </div>
+          </details>
+          <details style="margin-bottom:1.2rem;">
+            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
+              <img src="assets/img/clientes/01.jpg" alt="" style="width:28px;height:28px;">
+              ¿Dónde puedo revisar el stock actual de mis productos?
+            </summary>
+            <div>
+              <p>Usa la opción “Inventario de Existencias” para ver cantidades actuales, buscar por producto y exportar a Excel.</p>
+              <a href="faq/stock-productos.html" class="btn-ghost">Leer más</a>
+            </div>
+          </details>
+          <details style="margin-bottom:1.2rem;">
+            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
+              <img src="assets/img/clientes/01.jpg" alt="" style="width:28px;height:28px;">
+              ¿Cómo agrego nuevos proveedores y categorías al sistema?
+            </summary>
+            <div>
+              <p>Ve a “Catálogos”, selecciona “Proveedores” o “Categorías”, completa los campos y guarda.</p>
+              <a href="faq/agregar-proveedores-categorias.html" class="btn-ghost">Leer más</a>
+            </div>
+          </details>
+          <details style="margin-bottom:1.2rem;">
+            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
+              <img src="assets/img/clientes/01.jpg" alt="" style="width:28px;height:28px;">
+              ¿Cómo registro un gasto y evito duplicidades en el sistema?
+            </summary>
+            <div>
+              <p>Define el tipo de gasto, registra el monto y selecciona si fue por cuenta ajena. Usa los filtros para evitar errores.</p>
+              <a href="faq/registrar-gasto.html" class="btn-ghost">Leer más</a>
+            </div>
+          </details>
+          <details style="margin-bottom:1.2rem;">
+            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
+              <img src="assets/img/clientes/01.jpg" alt="" style="width:28px;height:28px;">
+              ¿Cómo realizo el cierre de caja al final del día?
+            </summary>
+            <div>
+              <p>Accede al reporte de Cierre de Caja para verificar ventas, gastos y resultados. Imprime si necesitas respaldo.</p>
+              <a href="faq/cierre-caja.html" class="btn-ghost">Leer más</a>
+            </div>
+          </details>
+          <a href="/faqs.html" class="btn-ver-mas">Ver más preguntas</a>
       </div>
+        </div>
     </section>
 
     <!-- Testimonials -->
