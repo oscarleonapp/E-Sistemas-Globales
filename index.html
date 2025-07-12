@@ -133,9 +133,9 @@
       transition: background .3s;
     }
 
-    body.dark #home {
+    /* body.dark #home {
       background: #2d3748;
-    }
+    } */
 
     #home h1 {
       font-size: 2.5rem;
@@ -260,7 +260,7 @@
     }
 
     .feature {
-      background: #ffffff;
+      background: var(--bg-light);
       border-radius: .75rem;
       padding: 1.5rem;
       text-align: center;
@@ -274,14 +274,14 @@
 
     .feature i {
       font-size: 2.4rem;
-      color: #012e5e;
+      color: var(--primary);
       display: block;
       margin-bottom: .8rem;
     }
 
     .feature h4,
-    p {
-      color: #012e5e;
+    .feature p {
+      color: var(--text-dark);
     }
 
     /* ---- CTA BUTTONS ---- */
@@ -347,7 +347,7 @@
     }
 
     .testimonial {
-      background: #fff;
+      background: var(--bg-light);
       padding: 1.5rem;
       border-radius: 4px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
@@ -733,7 +733,7 @@
   </div>
 </section>
 <!-- Carrusel de logos de clientes -->
-<section id="clientes-carousel" style="background: #fff; padding: 2.5rem 0;">
+<section id="clientes-carousel" style="background: var(--bg-light); padding: 2.5rem 0;">
   <div class="container">
     <h2 style="margin-bottom:2rem;">Clientes destacados</h2>
     <div class="carousel-logos" style="overflow:hidden;position:relative;">
@@ -771,7 +771,7 @@
   </style>
   </section>
     <!-- Portfolio -->
-    <section id="portfolio" style="background: #fff; padding: 4rem 0;">
+    <section id="portfolio" style="background: var(--bg-light); padding: 4rem 0;">
       <div class="container">
         <h2>Portafolio de Clientes</h2>
         <!-- Filtros -->
