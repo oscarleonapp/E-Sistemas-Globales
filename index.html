@@ -733,24 +733,45 @@
     </section>
     <!-- Sección Quiénes Somos -->
 <section id="quienes-somos" style="background: var(--bg-light); padding: 4rem 0;">
-  <div class="container">
-    <h2>¿Quiénes Somos?</h2>
-    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
-      <div style="flex:1; min-width:260px; text-align: justify;">
-        <p style="font-size:1.1rem; line-height:1.7; color:var(--text-dark);">
-          <strong>E‑Sistemas Globales</strong> es una empresa guatemalteca con más de 25 años de experiencia en el desarrollo de software a medida para empresas de todos los tamaños. Nuestro equipo está comprometido con la innovación, la calidad y el acompañamiento cercano a cada cliente.<br><br>
-          Nos especializamos en soluciones para inventario, facturación, contabilidad y control de gasolineras, ayudando a nuestros clientes a optimizar sus procesos y crecer de manera sostenible.
-        </p>
-        <p  style="font-size:1.1rem; line-height:1.7; color:var(--text-dark);">
-          Nuestra trayectoria y la confianza que nuestros clientes han depositado en nosotros durante más de dos décadas nos respaldan. Innovamos constantemente para mantenernos a la vanguardia y seguir siendo un aliado estratégico en el crecimiento y la transformación digital de su negocio.
-        </p>
-      </div>
-      <div style="flex:1; min-width:220px; text-align:center;">
-        <img src="assets/img/logo/e.sistemas-logo-white.png" alt="E‑Sistemas Globales" style="max-width:220px; border-radius:1rem; box-shadow:0 4px 16px rgba(0,0,0,.12); background:#012e5e; padding:1rem;">
-      </div>
+  <div class="container" style="max-width: 960px; margin: 0 auto; text-align: center;">
+    
+    <!-- Logo centrado -->
+    <img 
+      src="assets/img/logo/e.sistemas-logo-white.png" 
+      alt="E‑Sistemas Globales" 
+      style="
+        max-width: 200px;
+        margin: 0 auto 1.5rem;
+        display: block;
+        background: #012e5e;
+        border-radius: 1rem;
+        padding: 1rem;
+        box-shadow: 0 4px 16px rgba(0,0,0,.12);
+      "
+    />
+
+    <!-- Título y subtítulo -->
+    <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 0.75rem;">¿Quiénes Somos?</h2>
+    <p style="font-size: 1.1rem; color: var(--text-dark); max-width: 720px; margin: 0 auto 2.5rem;">
+      Más de 25 años desarrollando soluciones de software a medida para empresas en Guatemala.
+    </p>
+
+    <!-- Texto en bloque -->
+    <div style="text-align: justify; font-size: 1.1rem; line-height: 1.7; color: var(--text-dark); max-width: 800px; margin: 0 auto;">
+      <p>
+        <strong>E‑Sistemas Globales</strong> es una empresa guatemalteca con más de dos décadas de experiencia en el desarrollo de software personalizado para pequeñas, medianas y grandes empresas. Nuestro enfoque está basado en la innovación constante, la calidad en cada implementación y el acompañamiento cercano a cada cliente.
+      </p>
+      <p>
+        Nos especializamos en sistemas para <strong>inventario</strong>, <strong>facturación</strong>, <strong>contabilidad</strong> y <strong>control de gasolineras</strong>. Brindamos soluciones escalables, fáciles de usar y adaptadas a las necesidades reales de tu operación.
+      </p>
+      <p>
+        Nuestra experiencia y la confianza de nuestros clientes nos respaldan. En cada proyecto, buscamos ser un aliado estratégico que impulse el crecimiento y la transformación digital de tu empresa.
+      </p>
     </div>
   </div>
 </section>
+
+
 <!-- Carrusel de logos de clientes -->
 <section id="clientes-carousel" style="background: var(--bg-light); padding: 2.5rem 0;">
   <div class="container">
@@ -841,9 +862,31 @@
             <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
             <p style="font-size:0.95rem;">Descripción</p>
           </div>
-          
-         
-         
+                    <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/el-ranchero.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
+            <p style="font-size:0.95rem;">Descripción</p>
+          </div>
+                    <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/ferronorte.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
+            <p style="font-size:0.95rem;">Descripción</p>
+          </div>
+                    <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/la-septima.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
+            <p style="font-size:0.95rem;">Descripción</p>
+          </div>
+                    <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/lacho.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
+            <p style="font-size:0.95rem;">Descripción</p>
+          </div>
+                    <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/mafesgua.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
+            <p style="font-size:0.95rem;">Descripción</p>
+          </div>
         </div>
       </div>
       <style>
@@ -898,114 +941,77 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" style="background: var(--bg-light);">
-      <div class="container">
-        <h2>Preguntas Frecuentes</h2>
-          <div style="max-width:700px;margin:0 auto;">
-          <details style="margin-bottom:1.2rem;">
-            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="assets/img/clientes/01.jpg" alt="Ícono de pregunta" style="width:28px;height:28px;">
-              ¿Cómo creo un nuevo cliente según su tipo de documento (NIT, CF, DPI)?
-            </summary>
-            <div>
-              <p>Puedes registrar clientes usando NIT, CF o DPI, según el tipo de identificación del comprador. Cada opción tiene pasos distintos.</p>
-              <a href="faq/crear-cliente.html" class="btn-ghost">Leer más</a>
-            </div>
-          </details>
-          <details style="margin-bottom:1.2rem;">
-            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="assets/img/clientes/01.jpg" alt="Ícono de pregunta" style="width:28px;height:28px;">
-              ¿Cómo registro correctamente una compra en SIP5 WEB?
-            </summary>
-            <div>
-              <p>Las compras se ingresan desde el módulo correspondiente, detallando proveedor, factura y productos comprados.</p>
-              <a href="faq/registro-compras.html" class="btn-ghost">Leer más</a>
-            </div>
-          </details>
-          <details style="margin-bottom:1.2rem;">
-            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="assets/img/clientes/01.jpg" alt="Ícono de pregunta" style="width:28px;height:28px;">
-              ¿Cuál es el proceso para crear un producto en el sistema SIP5 WEB?
-            </summary>
-            <div>
-              <p>Debes llenar datos básicos como código, nombre, presentación y precios. Asegúrate de tener proveedor y categoría creados.</p>
-              <a href="faq/crear-producto.html" class="btn-ghost">Leer más</a>
-            </div>
-          </details>
-          <details style="margin-bottom:1.2rem;">
-            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="assets/img/clientes/01.jpg" alt="Ícono de pregunta" style="width:28px;height:28px;">
-              ¿Dónde consulto y descargo el libro de ventas y compras?
-            </summary>
-            <div>
-              <p>Ve al menú de reportes para visualizar ambos libros, filtra por fecha y descarga el informe de ventas o compras.</p>
-              <a href="faq/libro-ventas-compras.html" class="btn-ghost">Leer más</a>
-            </div>
-          </details>
-          <details style="margin-bottom:1.2rem;">
-            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="assets/img/clientes/01.jpg" alt="Ícono de pregunta" style="width:28px;height:28px;">
-              ¿Cómo puedo modificar un turno cerrado por error?
-            </summary>
-            <div>
-              <p>Solo usuarios con permisos de gerencia pueden editar un turno desde el historial y guardar los cambios necesarios.</p>
-              <a href="faq/modificar-turno.html" class="btn-ghost">Leer más</a>
-            </div>
-          </details>
-          <details style="margin-bottom:1.2rem;">
-            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="assets/img/clientes/01.jpg" alt="Ícono de pregunta" style="width:28px;height:28px;">
-              ¿Qué pasos debo seguir para realizar el cierre de un turno correctamente?
-            </summary>
-            <div>
-              <p>Ingresa los datos del día como efectivo, POS y cheques, y guarda el cierre desde el módulo correspondiente.</p>
-              <a href="faq/cierre-turno.html" class="btn-ghost">Leer más</a>
-            </div>
-          </details>
-          <details style="margin-bottom:1.2rem;">
-            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="assets/img/clientes/01.jpg" alt="Ícono de pregunta" style="width:28px;height:28px;">
-              ¿Dónde puedo revisar el stock actual de mis productos?
-            </summary>
-            <div>
-              <p>Usa la opción “Inventario de Existencias” para ver cantidades actuales, buscar por producto y exportar a Excel.</p>
-              <a href="faq/stock-productos.html" class="btn-ghost">Leer más</a>
-            </div>
-          </details>
-          <details style="margin-bottom:1.2rem;">
-            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="assets/img/clientes/01.jpg" alt="Ícono de pregunta" style="width:28px;height:28px;">
-              ¿Cómo agrego nuevos proveedores y categorías al sistema?
-            </summary>
-            <div>
-              <p>Ve a “Catálogos”, selecciona “Proveedores” o “Categorías”, completa los campos y guarda.</p>
-              <a href="faq/agregar-proveedores-categorias.html" class="btn-ghost">Leer más</a>
-            </div>
-          </details>
-          <details style="margin-bottom:1.2rem;">
-            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="assets/img/clientes/01.jpg" alt="Ícono de pregunta" style="width:28px;height:28px;">
-              ¿Cómo registro un gasto y evito duplicidades en el sistema?
-            </summary>
-            <div>
-              <p>Define el tipo de gasto, registra el monto y selecciona si fue por cuenta ajena. Usa los filtros para evitar errores.</p>
-              <a href="faq/registrar-gasto.html" class="btn-ghost">Leer más</a>
-            </div>
-          </details>
-          <details style="margin-bottom:1.2rem;">
-            <summary style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.7rem;">
-              <img src="assets/img/clientes/01.jpg" alt="Ícono de pregunta" style="width:28px;height:28px;">
-              ¿Cómo realizo el cierre de caja al final del día?
-            </summary>
-            <div>
-              <p>Accede al reporte de Cierre de Caja para verificar ventas, gastos y resultados. Imprime si necesitas respaldo.</p>
-              <a href="faq/cierre-caja.html" class="btn-ghost">Leer más</a>
-            </div>
-          </details>
-          <a href="faqs.html" class="btn-ver-mas">Ver más preguntas</a>
-      </div>
+<section id="faq" style="background: var(--bg-light); padding: 4rem 0;">
+  <div class="container">
+    <h2 style="text-align:center; font-size: 2rem; margin-bottom: 2rem; color: var(--primary);">Preguntas Frecuentes</h2>
+    <div style="max-width: 800px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+
+      <details style="margin-bottom: 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1rem;">
+        <summary style="font-weight: 600; font-size: 1.1rem; cursor: pointer; color: var(--primary); display: flex; align-items: center;">
+          <i class="bi bi-person-plus" style="margin-right: .6rem; color: var(--secondary);"></i>¿Cómo crear un cliente en SIP5 WEB?
+        </summary>
+        <div style="margin-top: .8rem;">
+          <p>Desde el módulo Catálogos, selecciona “Clientes” y haz clic en “Nuevo”. Completa los datos según NIT, CF o DPI.</p>
+          <a href="faq/crear-cliente.html" class="btn-ver-mas">Ver paso a paso</a>
         </div>
-    </section>
+      </details>
+
+      <details style="margin-bottom: 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1rem;">
+        <summary style="font-weight: 600; font-size: 1.1rem; cursor: pointer; color: var(--primary); display: flex; align-items: center;">
+          <i class="bi bi-clipboard-check" style="margin-right: .6rem; color: var(--secondary);"></i>¿Cómo realizar mi inventario de comparación?
+        </summary>
+        <div style="margin-top: .8rem;">
+          <p>Ingresa a “Inventario → Conteo Físico”, carga productos y registra las cantidades reales. Luego ajusta el inventario.</p>
+          <a href="faq/inventario-comparacion.html" class="btn-ver-mas">Ver detalles completos</a>
+        </div>
+      </details>
+
+      <details style="margin-bottom: 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1rem;">
+        <summary style="font-weight: 600; font-size: 1.1rem; cursor: pointer; color: var(--primary); display: flex; align-items: center;">
+          <i class="bi bi-receipt" style="margin-right: .6rem; color: var(--secondary);"></i>¿Cómo realizar una cotización?
+        </summary>
+        <div style="margin-top: .8rem;">
+          <p>Desde “Cotizaciones”, crea una nueva, selecciona el cliente, agrega productos y genera el documento.</p>
+          <a href="faq/crear-cotizacion.html" class="btn-ver-mas">Guía completa aquí</a>
+        </div>
+      </details>
+
+      <details style="margin-bottom: 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1rem;">
+        <summary style="font-weight: 600; font-size: 1.1rem; cursor: pointer; color: var(--primary); display: flex; align-items: center;">
+          <i class="bi bi-box" style="margin-right: .6rem; color: var(--secondary);"></i>¿Cómo ver mi inventario?
+        </summary>
+        <div style="margin-top: .8rem;">
+          <p>Accede al menú “Inventario de Existencias” para ver, filtrar y exportar el stock actual de productos.</p>
+          <a href="faq/ver-inventario.html" class="btn-ver-mas">Ver instrucciones completas</a>
+        </div>
+      </details>
+
+      <details style="margin-bottom: 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1rem;">
+        <summary style="font-weight: 600; font-size: 1.1rem; cursor: pointer; color: var(--primary); display: flex; align-items: center;">
+          <i class="bi bi-cash-coin" style="margin-right: .6rem; color: var(--secondary);"></i>¿Cómo hacer una venta?
+        </summary>
+        <div style="margin-top: .8rem;">
+          <p>Desde “Ventas”, selecciona cliente, ingresa productos, forma de pago y genera el comprobante.</p>
+          <a href="faq/hacer-venta.html" class="btn-ver-mas">Paso a paso detallado</a>
+        </div>
+      </details>
+
+      <details style="margin-bottom: 1.5rem;">
+        <summary style="font-weight: 600; font-size: 1.1rem; cursor: pointer; color: var(--primary); display: flex; align-items: center;">
+          <i class="bi bi-journal-check" style="margin-right: .6rem; color: var(--secondary);"></i>¿Cómo ver mi cierre de caja?
+        </summary>
+        <div style="margin-top: .8rem;">
+          <p>Desde “Reportes → Cierre de Caja General”, selecciona fechas, elige el resumen y genera el reporte.</p>
+          <a href="faq/cierre-caja.html" class="btn-ver-mas">Ver proceso completo</a>
+        </div>
+      </details>
+
+      <a href="faqs.html" class="btn-ver-mas" style="text-align:center;display:block;margin-top:2rem;">Ver todas las preguntas</a>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- Testimonials -->
     <section id="testimonials">
@@ -1021,44 +1027,45 @@
     </section>
 
     <!-- Blog -->
-    <section id="blog">
-      <div class="container">
-        <h2>Lo más reciente de nosotros</h2>
-        <div class="grid">
-          <div class="card" style="background: linear-gradient(135deg,#012e5e 0%,#000 60%);
-      color:#fff;">
-            <img src="assets/img/clientes/01.jpg" alt="Imagen del Post 1"
-              style="width:100%;border-radius:0.5rem 0.5rem 0 0;margin-bottom:1rem;">
-            <h3>Título de Post 1</h3>
-            <p style="color: var(--text-dark);">Resumen breve del post para atraer clics.</p>
-            <a href="#"
-              style="display:inline-block;background:#fff;color:#012e5e;padding:0.6rem 1.2rem;border-radius:0.4rem;font-weight:600;text-align:center;margin-top:1rem;transition:background .2s;">Leer
-              más&nbsp;→</a>
+<section id="blog" style="background: var(--bg-light); padding: 4rem 0;">
+  <div class="container">
+    <h2 style="text-align:center; font-size: 2rem; margin-bottom: 2.5rem; color: var(--primary);">Lo más reciente de nosotros</h2>
+    <div class="grid" style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
 
-          </div>
-          <div class="card" style="background: linear-gradient(135deg,#012e5e 0%,#000 60%);
-      color:#fff;">
-            <img src="assets/img/clientes/02.jpg" alt="Imagen del Post 2"
-              style="width:100%;border-radius:0.5rem 0.5rem 0 0;margin-bottom:1rem;">
-            <h3>Título de Post 2</h3>
-            <p style="color: var(--text-dark);">Resumen breve del post para atraer clics.</p>
-            <a href="#"
-              style="display:inline-block;background:#fff;color:#012e5e;padding:0.6rem 1.2rem;border-radius:0.4rem;font-weight:600;text-align:center;margin-top:1rem;transition:background .2s;">Leer
-              más&nbsp;→</a>
-          </div>
-          <div class="card" style="background: linear-gradient(135deg,#012e5e 0%,#000 60%);
-      color:#fff;">
-            <img src="assets/img/clientes/03.jpg" alt="Imagen del Post 3"
-              style="width:100%;border-radius:0.5rem 0.5rem 0 0;margin-bottom:1rem;">
-            <h3>Título de Post 3</h3>
-            <p style="color: var(--text-dark);">Resumen breve del post para atraer clics.</p>
-            <a href="#"
-              style="display:inline-block;background:#fff;color:#012e5e;padding:0.6rem 1.2rem;border-radius:0.4rem;font-weight:600;text-align:center;margin-top:1rem;transition:background .2s;">Leer
-              más&nbsp;→</a>
-          </div>
+      <!-- Card 1 -->
+      <div class="card" style="background: #fff; border-radius: .75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.3s;">
+        <img src="assets/img/clientes/01.jpg" alt="Post 1" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 1.5rem;">
+          <h3 style="margin-bottom: 0.5rem; color: var(--primary); font-size: 1.2rem;">Título de Post 1</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-dark);">Resumen breve del post para atraer clics.</p>
+          <a href="#" style="display: inline-block; margin-top: 1rem; color: var(--primary); font-weight: 600; text-decoration: none;">Leer más →</a>
         </div>
       </div>
-    </section>
+
+      <!-- Card 2 -->
+      <div class="card" style="background: #fff; border-radius: .75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.3s;">
+        <img src="assets/img/clientes/02.jpg" alt="Post 2" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 1.5rem;">
+          <h3 style="margin-bottom: 0.5rem; color: var(--primary); font-size: 1.2rem;">Título de Post 2</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-dark);">Resumen breve del post para atraer clics.</p>
+          <a href="#" style="display: inline-block; margin-top: 1rem; color: var(--primary); font-weight: 600; text-decoration: none;">Leer más →</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card" style="background: #fff; border-radius: .75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.3s;">
+        <img src="assets/img/clientes/03.jpg" alt="Post 3" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 1.5rem;">
+          <h3 style="margin-bottom: 0.5rem; color: var(--primary); font-size: 1.2rem;">Título de Post 3</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-dark);">Resumen breve del post para atraer clics.</p>
+          <a href="#" style="display: inline-block; margin-top: 1rem; color: var(--primary); font-weight: 600; text-decoration: none;">Leer más →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- WhatsApp -->
     <a href="https://wa.me/50238339762?text=Me%20pueden%20brindar%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios"
