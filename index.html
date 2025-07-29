@@ -39,7 +39,7 @@
       --secondary: #2b6cb0;
       --accent: #f56565;
       --text-dark: #e2e8f0;
-      --bg-light: #1a202c;
+      --bg-light: #000000;
     }
 
     /* ---------- Base styles ---------- */
@@ -79,7 +79,7 @@
     }
 
     body.dark header {
-      background: #2d3748;
+      background: #000000;
     }
 
     .nav-wrap {
@@ -128,6 +128,7 @@
 
     body.dark #theme-toggle {
       color: var(--text-dark);
+      background-color: #000000;
     }
 
     /* ---------- Hero ---------- */
@@ -137,10 +138,6 @@
       /* background: #fff; */
       transition: background .3s;
     }
-
-    /* body.dark #home {
-      background: #2d3748;
-    } */
 
     #home h1 {
       font-size: 2.5rem;
@@ -302,13 +299,13 @@
     }
 
     .btn-cta {
-      background: #00d084;
+      background: #012e5e;
       color: #fff;
     }
 
     .btn-ghost {
-      border: 2px solid #00d084;
-      color: #00d084;
+      border: 2px solid #012e5e;
+      color: #012e5e;
     }
 
     .btn-cta:hover,
@@ -423,7 +420,7 @@
     }
 
     body.dark footer {
-      background: #2d3748;
+      background: #000000;
     }
 
     /* ---------- Responsive nav ---------- */
@@ -440,7 +437,7 @@
       }
 
       body.dark nav {
-        background: #2d3748;
+        background: #000000;
       }
 
       nav.open {
@@ -512,10 +509,11 @@
       border: none;
       border-radius: 0.5rem;
       cursor: pointer;
-      background: #00d084;
+      background: #012e5e;
       /* Verde OSCARLEON */
       color: #fff;
       transition: transform 0.2s ease;
+      border: 2px solid #fff;
     }
 
     .btn-main:hover {
@@ -539,6 +537,11 @@
       object-fit: contain;
       filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .1));
     }
+
+    
+        p.dark{
+          color: #fff !important;
+        }
   </style>
 </head>
 
@@ -599,8 +602,8 @@
     <!-- HERO -->
     <section id="home" class="hero">
       <div class="hero__content">
-        <h1 style="color: var(--text-dark);">Impulsa tu empresa con software a medida</h1>
-        <p style="color: var(--text-dark);">
+        <h1 style="color: var(--text-white);">Impulsa tu empresa con software a medida</h1>
+        <p style="color: var(--text-white);">
           Optimizamos tu Inventario, Facturación, Contabilidad y Control de Gasolineras
           con soluciones fáciles de usar y&nbsp;100 % escalables.
         </p>
@@ -799,67 +802,53 @@
         </div>
         <div class="grid" id="portfolio-grid">
           <div class="portfolio-item" data-category="software">
-            <img src="assets/img/logo-clientes/1.png" alt="Sistemas Globales - Cliente 1">
-            <h4 style="margin:0.5rem 0 0.25rem;">Sistemas Globales</h4>
-            <p style="font-size:0.95rem;color:#444;">Soluciones integrales de software empresarial para gestión y
-              control.</p>
+            <img src="assets/img/clientes/agro-revno.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
+            <p style="font-size:0.95rem;">Descripción</p>
           </div>
           <div class="portfolio-item" data-category="software">
-            <img src="assets/img/logo-clientes/11.png" alt="Sistemas Globales - Cliente 1">
-            <h4 style="margin:0.5rem 0 0.25rem;">Sistemas Globales</h4>
-            <p style="font-size:0.95rem;color:#444;">Soluciones integrales de software empresarial para gestión y
-              control.</p>
+            <img src="assets/img/clientes/boutique.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
+            <p style="font-size:0.95rem;">Descripción</p>
           </div>
-          <div class="portfolio-item" data-category="contabilidad">
-            <img src="assets/img/clientes/01.jpg" alt="Sistemas Globales - Cliente 1">
-            <h4 style="margin:0.5rem 0 0.25rem;">Sistemas Globales</h4>
-            <p style="font-size:0.95rem;color:#444;">Soluciones integrales de software empresarial para gestión y
-              control.</p>
+            <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/caporal-grupo.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
+            <p style="font-size:0.95rem;">Descripción</p>
           </div>
-          <div class="portfolio-item" data-category="gasolineras">
-            <img src="assets/img/clientes/01.jpg" alt="Sistemas Globales - Cliente 1">
-            <h4 style="margin:0.5rem 0 0.25rem;">Sistemas Globales</h4>
-            <p style="font-size:0.95rem;color:#444;">Soluciones integrales de software empresarial para gestión y
-              control.</p>
+                    <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/construmetales.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
+            <p style="font-size:0.95rem;">Descripción</p>
           </div>
-          <div class="portfolio-item" data-category="gasolineras">
-            <img src="assets/img/clientes/02.jpg" alt="Cliente 2">
+                    <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/dist-maya.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
+            <p style="font-size:0.95rem;">Descripción</p>
           </div>
-          <div class="portfolio-item" data-category="contabilidad">
-            <img src="assets/img/clientes/03.jpg" alt="Cliente 3">
+                    <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/el-caporal.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
+            <p style="font-size:0.95rem;">Descripción</p>
           </div>
-          <div class="portfolio-item" data-category="software">
-            <img src="assets/img/clientes/04.jpg" alt="Cliente 4">
+                    <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/el-obrero-2.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
+            <p style="font-size:0.95rem;">Descripción</p>
           </div>
-          <div class="portfolio-item" data-category="software">
-            <img src="assets/img/clientes/01.jpg" alt="Sistemas Globales - Cliente 1">
+                    <div class="portfolio-item" data-category="software">
+            <img src="assets/img/clientes/el-obrero.jpg" alt="Sistemas Globales - Cliente 1">
+            <h4 style="margin:0.5rem 0 0.25rem;">Nombre</h4>
+            <p style="font-size:0.95rem;">Descripción</p>
           </div>
-          <div class="portfolio-item" data-category="gasolineras">
-            <img src="assets/img/clientes/02.jpg" alt="Cliente 2">
-          </div>
-          <div class="portfolio-item" data-category="contabilidad">
-            <img src="assets/img/clientes/03.jpg" alt="Cliente 3">
-          </div>
-          <div class="portfolio-item" data-category="software">
-            <img src="assets/img/clientes/04.jpg" alt="Cliente 4">
-          </div>
-          <div class="portfolio-item" data-category="software">
-            <img src="assets/img/clientes/01.jpg" alt="Sistemas Globales - Cliente 1">
-          </div>
-          <div class="portfolio-item" data-category="contabilidad">
-            <img src="assets/img/clientes/02.jpg" alt="Cliente 2">
-          </div>
-          <div class="portfolio-item" data-category="gasolineras">
-            <img src="assets/img/clientes/03.jpg" alt="Cliente 3">
-          </div>
-          <div class="portfolio-item" data-category="software">
-            <img src="assets/img/clientes/04.jpg" alt="Cliente 4">
-          </div>
+          
+         
+         
         </div>
       </div>
       <style>
         #portfolio-filters .filter-btn {
-          background: #eee;
+          background: #2d3748;
           border: none;
           padding: 0.6rem 1.3rem;
           margin: 0 0.3rem 0.5rem 0;
@@ -867,12 +856,12 @@
           font-weight: 600;
           cursor: pointer;
           transition: background .2s, color .2s;
-          color: var(--primary);
+          color: #fff;
         }
 
         #portfolio-filters .filter-btn.active,
         #portfolio-filters .filter-btn:hover {
-          background: var(--primary);
+          background: #000;
           color: #fff;
         }
 
@@ -883,6 +872,7 @@
         .portfolio-item[hidden] {
           display: none !important;
         }
+
       </style>
       <script>
         // Filtros de portafolio
