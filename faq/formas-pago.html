@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Cómo configurar formas de pago en SIP5 WEB? | FAQ ESG</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+  <link rel="shortcut icon" href="../assets/img/logo/favicon.png" type="image/x-icon" />
+  <style>
+    :root {
+      --primary: #2d488a;
+      --secondary: #71b9d3;
+      --bg-light: #f7fafc;
+      --text-dark: #2d3748;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #012e5e 0%, #000 60%);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--bg-light);
+    }
+    h2 {
+      color: var(--primary);
+      margin-top: 2rem;
+    }
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .tip {
+      background: #e6f0fa;
+      border-left: 4px solid var(--primary);
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .warning {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn-back:hover {
+      background: var(--secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>¿Cómo configurar formas de pago en SIP5 WEB?</h1>
+  </header>
+
+  <main class="container">
+    <p>Configurar correctamente las formas de pago es esencial para facilitar las transacciones y llevar un control preciso de los ingresos y métodos de cobro utilizados.</p>
+
+    <h2>💳 ¿Qué son las formas de pago?</h2>
+    <p>Son los diferentes métodos que acepta tu negocio para recibir pagos:</p>
+    <ul>
+      <li>Efectivo</li>
+      <li>Tarjetas de crédito y débito</li>
+      <li>Cheques</li>
+      <li>Transferencias bancarias</li>
+      <li>Pagos móviles (billeteras digitales)</li>
+      <li>Crédito (ventas a plazo)</li>
+    </ul>
+
+    <h2>⚙️ Configurar formas de pago</h2>
+    
+    <h3>🔧 Acceso a configuración</h3>
+    <ul>
+      <li>Ve al menú <strong>Configuración</strong> o <strong>Administración</strong></li>
+      <li>Busca <strong>Formas de Pago</strong></li>
+      <li>También puede estar en <strong>Catálogos</strong> → <strong>Formas de Pago</strong></li>
+    </ul>
+
+    <h3>➕ Crear nueva forma de pago</h3>
+    <ul>
+      <li>Haz clic en <strong>Nueva Forma de Pago</strong></li>
+      <li><strong>Código:</strong> Identificador único (ej: EFE, TC, CHE)</li>
+      <li><strong>Nombre:</strong> Descripción clara (ej: Efectivo, Tarjeta Crédito)</li>
+      <li><strong>Tipo:</strong> Categoría de la forma de pago</li>
+      <li><strong>Estado:</strong> Activo o inactivo</li>
+    </ul>
+
+    <div class="tip">
+      <strong>💡 Códigos recomendados:</strong>
+      <ul>
+        <li>EFE - Efectivo</li>
+        <li>TC - Tarjeta de Crédito</li>
+        <li>TD - Tarjeta de Débito</li>
+        <li>CHE - Cheque</li>
+        <li>TRA - Transferencia</li>
+        <li>CRE - Crédito</li>
+      </ul>
+    </div>
+
+    <h2>💰 Configuración por tipo de pago</h2>
+    
+    <h3>💵 Efectivo</h3>
+    <ul>
+      <li><strong>Configuración:</strong> Forma de pago más simple</li>
+      <li><strong>Cambio:</strong> Habilitar cálculo automático de cambio</li>
+      <li><strong>Caja chica:</strong> Vincular con control de caja</li>
+      <li><strong>Denominaciones:</strong> Configurar billetes y monedas disponibles</li>
+    </ul>
+
+    <h3>💳 Tarjetas de crédito/débito</h3>
+    <ul>
+      <li><strong>Comisiones:</strong> Porcentaje que cobra el banco</li>
+      <li><strong>Días de depósito:</strong> Cuándo se acredita el dinero</li>
+      <li><strong>POS:</strong> Vincular con terminal punto de venta</li>
+      <li><strong>Tipos de tarjeta:</strong> Visa, MasterCard, American Express</li>
+      <li><strong>Cuotas:</strong> Si acepta pagos diferidos</li>
+    </ul>
+
+    <h3>📝 Cheques</h3>
+    <ul>
+      <li><strong>Días de compensación:</strong> Tiempo para que se haga efectivo</li>
+      <li><strong>Comisiones:</strong> Costos bancarios por depósito</li>
+      <li><strong>Validaciones:</strong> Verificar fecha, firma, fondos</li>
+      <li><strong>Postdatados:</strong> Si acepta cheques a fecha futura</li>
+    </ul>
+
+    <h3>🏦 Transferencias</h3>
+    <ul>
+      <li><strong>Cuentas bancarias:</strong> Vincular con cuentas de la empresa</li>
+      <li><strong>Referencia:</strong> Solicitar número de transacción</li>
+      <li><strong>Verificación:</strong> Confirmar recepción antes de entregar</li>
+      <li><strong>Comisiones:</strong> Costos bancarios si aplican</li>
+    </ul>
+
+    <div class="warning">
+      <strong>⚠️ Importante para transferencias:</strong>
+      <ul>
+        <li>Siempre verifica la recepción antes de entregar productos</li>
+        <li>Solicita comprobante de la transferencia</li>
+        <li>Confirma que el monto coincida exactamente</li>
+        <li>Registra la referencia bancaria en el sistema</li>
+      </ul>
+    </div>
+
+    <h2>🛒 Configuración en ventas</h2>
+    
+    <h3>⚡ Proceso de venta</h3>
+    <ul>
+      <li>Al finalizar la venta, aparecen las formas de pago disponibles</li>
+      <li>El cajero selecciona el método utilizado por el cliente</li>
+      <li>El sistema registra automáticamente en los reportes</li>
+      <li>Se actualiza el control de caja según la forma de pago</li>
+    </ul>
+
+    <h3>🔄 Pagos mixtos</h3>
+    <ul>
+      <li>Permite combinar múltiples formas de pago en una venta</li>
+      <li>Ejemplo: Parte en efectivo + parte con tarjeta</li>
+      <li>El sistema calcula automáticamente los montos</li>
+      <li>Útil para ventas de montos altos</li>
+    </ul>
+
+    <h2>📊 Control y reportes</h2>
+    
+    <h3>📈 Reportes por forma de pago</h3>
+    <ul>
+      <li><strong>Ventas por forma de pago:</strong> Distribución de métodos usados</li>
+      <li><strong>Comisiones:</strong> Costos por tarjetas y otros métodos</li>
+      <li><strong>Arqueo por método:</strong> Control de efectivo vs otros métodos</li>
+      <li><strong>Análisis de preferencias:</strong> Qué prefieren tus clientes</li>
+    </ul>
+
+    <h3>💹 Análisis financiero</h3>
+    <ul>
+      <li><strong>Flujo de efectivo:</strong> Qué métodos dan liquidez inmediata</li>
+      <li><strong>Costos por método:</strong> Comisiones y gastos asociados</li>
+      <li><strong>Velocidad de cobro:</strong> Qué tan rápido se hacen efectivos</li>
+      <li><strong>Riesgos:</strong> Cheques devueltos, contracargos de tarjetas</li>
+    </ul>
+
+    <h2>📱 Formas de pago modernas</h2>
+    
+    <h3>💳 Pagos móviles</h3>
+    <ul>
+      <li><strong>QR codes:</strong> Para transferencias inmediatas</li>
+      <li><strong>Apps bancarias:</strong> Integración con billeteras digitales</li>
+      <li><strong>NFC:</strong> Pagos por aproximación</li>
+      <li><strong>Criptomonedas:</strong> Si es legal en tu región</li>
+    </ul>
+
+    <h3>🌐 Pagos en línea</h3>
+    <ul>
+      <li><strong>PayPal:</strong> Para ventas internacionales</li>
+      <li><strong>Pasarelas de pago:</strong> Procesadores locales</li>
+      <li><strong>Suscripciones:</strong> Para servicios recurrentes</li>
+      <li><strong>Marketplace:</strong> Integración con plataformas de venta</li>
+    </ul>
+
+    <h2>🔒 Seguridad en formas de pago</h2>
+    
+    <h3>🛡️ Medidas de seguridad</h3>
+    <ul>
+      <li><strong>Validación de tarjetas:</strong> Verificar chip y PIN</li>
+      <li><strong>Límites diarios:</strong> Máximos por forma de pago</li>
+      <li><strong>Autorizaciones:</strong> Para montos altos</li>
+      <li><strong>Conciliación diaria:</strong> Verificar todos los métodos</li>
+    </ul>
+
+    <h3>📋 Políticas recomendadas</h3>
+    <ul>
+      <li>Establecer límites máximos para cada forma de pago</li>
+      <li>Capacitar al personal en verificación de documentos</li>
+      <li>Mantener registros detallados de todas las transacciones</li>
+      <li>Revisar periódicamente las comisiones bancarias</li>
+    </ul>
+
+    <h2>⚙️ Configuraciones avanzadas</h2>
+    
+    <h3>🎯 Por tipo de cliente</h3>
+    <ul>
+      <li><strong>Clientes VIP:</strong> Métodos especiales o descuentos</li>
+      <li><strong>Mayoristas:</strong> Crédito extendido</li>
+      <li><strong>Nuevos clientes:</strong> Solo efectivo o tarjeta</li>
+    </ul>
+
+    <h3>📦 Por tipo de producto</h3>
+    <ul>
+      <li><strong>Productos costosos:</strong> Verificaciones adicionales</li>
+      <li><strong>Servicios:</strong> Pagos parciales o diferidos</li>
+      <li><strong>Productos digitales:</strong> Solo pagos inmediatos</li>
+    </ul>
+
+    <h2>📊 Mejores prácticas</h2>
+    <ul>
+      <li>Ofrece múltiples opciones para comodidad del cliente</li>
+      <li>Calcula y considera los costos de cada método</li>
+      <li>Capacita al personal en el uso de cada forma de pago</li>
+      <li>Mantén actualizadas las configuraciones bancarias</li>
+      <li>Revisa periódicamente la efectividad de cada método</li>
+      <li>Comunica claramente qué formas de pago aceptas</li>
+    </ul>
+
+    <a href="../faqs.html" class="btn-back">← Volver a Preguntas Frecuentes</a>
+  </main>
+
+</body>
+</html>

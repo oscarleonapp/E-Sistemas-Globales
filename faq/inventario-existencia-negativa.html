@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Cómo manejar inventario con existencia negativa en SIP5 WEB? | FAQ ESG</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+  <link rel="shortcut icon" href="../assets/img/logo/favicon.png" type="image/x-icon" />
+  <style>
+    :root {
+      --primary: #2d488a;
+      --secondary: #71b9d3;
+      --bg-light: #f7fafc;
+      --text-dark: #2d3748;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #012e5e 0%, #000 60%);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--bg-light);
+    }
+    h2 {
+      color: var(--primary);
+      margin-top: 2rem;
+    }
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .tip {
+      background: #e6f0fa;
+      border-left: 4px solid var(--primary);
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .warning {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .danger {
+      background: #f8d7da;
+      border-left: 4px solid #dc3545;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn-back:hover {
+      background: var(--secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>¿Cómo manejar inventario con existencia negativa en SIP5 WEB?</h1>
+  </header>
+
+  <main class="container">
+    <p>Las existencias negativas ocurren cuando el sistema registra más salidas que entradas de un producto. Aquí te explicamos cómo identificar, manejar y corregir esta situación.</p>
+
+    <h2>❌ ¿Qué son las existencias negativas?</h2>
+    <p>Se presenta cuando:</p>
+    <ul>
+      <li>El saldo de un producto muestra números negativos (ej: -5 unidades)</li>
+      <li>Se han registrado más ventas que entradas al inventario</li>
+      <li>Hay errores en el registro de movimientos</li>
+      <li>Problemas en la sincronización de datos</li>
+      <li>Ajustes incorrectos de inventario</li>
+    </ul>
+
+    <h2>🔍 Identificar productos con existencia negativa</h2>
+    
+    <h3>📊 Reporte de existencias negativas</h3>
+    <ul>
+      <li>Ve al menú <strong>Inventario</strong> o <strong>Reportes</strong></li>
+      <li>Busca <strong>Inventario con Existencia Negativa</strong></li>
+      <li>También puede estar en <strong>Reportes de Control</strong></li>
+      <li>El reporte mostrará todos los productos con saldo negativo</li>
+    </ul>
+
+    <h3>📋 Información del reporte</h3>
+    <ul>
+      <li><strong>Código del producto:</strong> Identificador único</li>
+      <li><strong>Nombre del producto:</strong> Descripción completa</li>
+      <li><strong>Existencia actual:</strong> Cantidad negativa</li>
+      <li><strong>Última entrada:</strong> Cuándo fue la última compra</li>
+      <li><strong>Última salida:</strong> Cuándo fue la última venta</li>
+      <li><strong>Valor del faltante:</strong> Costo total del faltante</li>
+    </ul>
+
+    <div class="danger">
+      <strong>🚨 Problemas que causan:</strong>
+      <ul>
+        <li>Informes de inventario incorrectos</li>
+        <li>Cálculos de costos erróneos</li>
+        <li>Problemas en reportes contables</li>
+        <li>Dificultades en auditorías</li>
+        <li>Decisiones de compra basadas en datos incorrectos</li>
+      </ul>
+    </div>
+
+    <h2>🔍 Causas comunes</h2>
+    
+    <h3>⚙️ Errores del sistema</h3>
+    <ul>
+      <li><strong>Ventas sin inventario:</strong> Sistema permite vender sin stock</li>
+      <li><strong>Ajustes incorrectos:</strong> Correcciones mal aplicadas</li>
+      <li><strong>Sincronización:</strong> Problemas entre múltiples sucursales</li>
+      <li><strong>Errores de digitación:</strong> Cantidades mal ingresadas</li>
+    </ul>
+
+    <h3>👥 Errores humanos</h3>
+    <ul>
+      <li><strong>Inventario inicial incorrecto:</strong> Saldos iniciales erróneos</li>
+      <li><strong>Compras no registradas:</strong> Mercadería recibida sin registrar</li>
+      <li><strong>Devoluciones no procesadas:</strong> Productos devueltos sin ajuste</li>
+      <li><strong>Mermas no registradas:</strong> Pérdidas no contabilizadas</li>
+    </ul>
+
+    <h2>🛠️ Métodos de corrección</h2>
+    
+    <h3>🔧 Ajuste de inventario</h3>
+    <ul>
+      <li>Ve a <strong>Inventario</strong> → <strong>Ajustes de Inventario</strong></li>
+      <li>Selecciona <strong>Nuevo Ajuste</strong></li>
+      <li>Busca el producto con existencia negativa</li>
+      <li>Ingresa la cantidad correcta (usualmente 0 o la cantidad real)</li>
+      <li>Selecciona motivo: <strong>Corrección de existencia negativa</strong></li>
+      <li>Documenta la razón del ajuste</li>
+      <li>Guarda el ajuste</li>
+    </ul>
+
+    <h3>📝 Proceso paso a paso</h3>
+    <ul>
+      <li><strong>1. Investigar:</strong> Revisar kardex del producto para entender el origen</li>
+      <li><strong>2. Contar físicamente:</strong> Verificar existencia real del producto</li>
+      <li><strong>3. Comparar:</strong> Sistema vs realidad física</li>
+      <li><strong>4. Ajustar:</strong> Corrigir la diferencia con ajuste de inventario</li>
+      <li><strong>5. Documentar:</strong> Registrar motivo y responsable del ajuste</li>
+    </ul>
+
+    <div class="tip">
+      <strong>💡 Antes de ajustar:</strong>
+      <ul>
+        <li>Verifica que no hay compras pendientes de registrar</li>
+        <li>Confirma que no hay devoluciones sin procesar</li>
+        <li>Revisa si hay traslados entre sucursales pendientes</li>
+        <li>Consulta con el encargado del área de inventarios</li>
+      </ul>
+    </div>
+
+    <h2>📊 Investigación detallada</h2>
+    
+    <h3>🔍 Revisar kardex</h3>
+    <ul>
+      <li>Consulta el kardex del producto afectado</li>
+      <li>Identifica cuándo se generó la existencia negativa</li>
+      <li>Busca patrones en los movimientos</li>
+      <li>Verifica si hay salidas sin entradas previas</li>
+    </ul>
+
+    <h3>📋 Verificar documentos</h3>
+    <ul>
+      <li><strong>Facturas de compra:</strong> Confirmar entradas registradas</li>
+      <li><strong>Facturas de venta:</strong> Verificar salidas correctas</li>
+      <li><strong>Notas de devolución:</strong> Devoluciones de clientes</li>
+      <li><strong>Ajustes previos:</strong> Correcciones anteriores</li>
+    </ul>
+
+    <h2>🚫 Prevenir existencias negativas</h2>
+    
+    <h3>⚙️ Configuraciones del sistema</h3>
+    <ul>
+      <li><strong>Bloquear ventas sin stock:</strong> Impedir ventas cuando no hay inventario</li>
+      <li><strong>Alertas de stock bajo:</strong> Avisar cuando se acerca a cero</li>
+      <li><strong>Validaciones automáticas:</strong> Verificar antes de permitir salidas</li>
+      <li><strong>Límites de ajustes:</strong> Requerir aprobación para ajustes grandes</li>
+    </ul>
+
+    <h3>📋 Procedimientos operativos</h3>
+    <ul>
+      <li><strong>Conteos cíclicos:</strong> Verificaciones periódicas de inventario</li>
+      <li><strong>Registro inmediato:</strong> Ingresar compras tan pronto como lleguen</li>
+      <li><strong>Capacitación:</strong> Personal entrenado en procedimientos</li>
+      <li><strong>Revisiones diarias:</strong> Verificar reportes de existencias negativas</li>
+    </ul>
+
+    <div class="warning">
+      <strong>⚠️ Configuración recomendada:</strong>
+      <ul>
+        <li>Activar alertas cuando el stock llegue a 5 unidades o menos</li>
+        <li>Bloquear ventas cuando el stock sea 0 o negativo</li>
+        <li>Requerir autorización para ajustes mayores a 10 unidades</li>
+        <li>Generar reporte diario de existencias negativas</li>
+      </ul>
+    </div>
+
+    <h2>📈 Monitoreo continuo</h2>
+    
+    <h3>📊 Reportes regulares</h3>
+    <ul>
+      <li><strong>Diario:</strong> Revisar nuevas existencias negativas</li>
+      <li><strong>Semanal:</strong> Análisis de tendencias y patrones</li>
+      <li><strong>Mensual:</strong> Evaluación general del control de inventarios</li>
+      <li><strong>Cuando sea necesario:</strong> Investigaciones específicas</li>
+    </ul>
+
+    <h3>🎯 Indicadores clave</h3>
+    <ul>
+      <li><strong>Número de productos:</strong> Con existencia negativa</li>
+      <li><strong>Valor total:</strong> Costo de los faltantes</li>
+      <li><strong>Frecuencia:</strong> Qué tan a menudo ocurre</li>
+      <li><strong>Productos recurrentes:</strong> Que siempre tienen problemas</li>
+    </ul>
+
+    <h2>🔄 Proceso de corrección masiva</h2>
+    
+    <h3>📊 Para múltiples productos</h3>
+    <ul>
+      <li>Exporta el reporte de existencias negativas a Excel</li>
+      <li>Realiza conteo físico de todos los productos afectados</li>
+      <li>Prepara un archivo de ajustes masivos</li>
+      <li>Importa los ajustes al sistema</li>
+      <li>Verifica que todas las correcciones se aplicaron</li>
+    </ul>
+
+    <h3>📋 Documentación</h3>
+    <ul>
+      <li>Registra fecha y hora de la corrección</li>
+      <li>Identifica responsable de la investigación</li>
+      <li>Documenta causas encontradas</li>
+      <li>Lista medidas preventivas implementadas</li>
+    </ul>
+
+    <h2>🎯 Mejores prácticas</h2>
+    <ul>
+      <li><strong>Prevención:</strong> Es mejor prevenir que corregir</li>
+      <li><strong>Revisión diaria:</strong> Monitorea existencias negativas todos los días</li>
+      <li><strong>Investigación inmediata:</strong> No dejes que se acumulen los problemas</li>
+      <li><strong>Capacitación continua:</strong> Personal actualizado en procedimientos</li>
+      <li><strong>Auditorías regulares:</strong> Verificaciones periódicas del sistema</li>
+      <li><strong>Documentación completa:</strong> Registra todas las correcciones</li>
+    </ul>
+
+    <a href="../faqs.html" class="btn-back">← Volver a Preguntas Frecuentes</a>
+  </main>
+
+</body>
+</html>

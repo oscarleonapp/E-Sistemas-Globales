@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Cómo manejar productos sin existencia en SIP5 WEB? | FAQ ESG</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+  <link rel="shortcut icon" href="../assets/img/logo/favicon.png" type="image/x-icon" />
+  <style>
+    :root {
+      --primary: #2d488a;
+      --secondary: #71b9d3;
+      --bg-light: #f7fafc;
+      --text-dark: #2d3748;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #012e5e 0%, #000 60%);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--bg-light);
+    }
+    h2 {
+      color: var(--primary);
+      margin-top: 2rem;
+    }
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .tip {
+      background: #e6f0fa;
+      border-left: 4px solid var(--primary);
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .warning {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn-back:hover {
+      background: var(--secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>¿Cómo manejar productos sin existencia en SIP5 WEB?</h1>
+  </header>
+
+  <main class="container">
+    <p>Gestionar correctamente los productos sin existencia es crucial para mantener la exactitud del inventario y brindar un buen servicio al cliente.</p>
+
+    <h2>📦 ¿Qué son productos sin existencia?</h2>
+    <p>Son productos que:</p>
+    <ul>
+      <li>Tienen stock cero en el sistema</li>
+      <li>No están disponibles para venta inmediata</li>
+      <li>Requieren reabastecimiento</li>
+      <li>Pueden estar temporalmente agotados</li>
+      <li>Necesitan seguimiento especial para reposición</li>
+    </ul>
+
+    <h2>🔍 Identificar productos sin existencia</h2>
+    
+    <h3>📊 Reporte de productos sin stock</h3>
+    <ul>
+      <li>Ve al menú <strong>Inventario</strong> o <strong>Reportes</strong></li>
+      <li>Busca <strong>Productos sin Existencia</strong></li>
+      <li>También puede estar en <strong>Control de Inventario</strong></li>
+      <li>Filtra por categoría, proveedor o ubicación</li>
+    </ul>
+
+    <h3>📋 Información del reporte</h3>
+    <ul>
+      <li><strong>Código del producto:</strong> Identificador único</li>
+      <li><strong>Nombre:</strong> Descripción del producto</li>
+      <li><strong>Categoría:</strong> Clasificación del producto</li>
+      <li><strong>Última venta:</strong> Cuándo se vendió por última vez</li>
+      <li><strong>Última compra:</strong> Cuándo ingresó al inventario</li>
+      <li><strong>Stock mínimo:</strong> Cantidad mínima configurada</li>
+      <li><strong>Proveedor:</strong> Quién surte el producto</li>
+    </ul>
+
+    <div class="tip">
+      <strong>💡 Filtros útiles:</strong>
+      <ul>
+        <li>Productos con ventas recientes (últimos 30 días)</li>
+        <li>Por categorías de alta rotación</li>
+        <li>Por proveedor específico</li>
+        <li>Por ubicación o sucursal</li>
+      </ul>
+    </div>
+
+    <h2>⚙️ Configurar alertas de stock</h2>
+    
+    <h3>🔔 Alertas automáticas</h3>
+    <ul>
+      <li>Ve a <strong>Configuración</strong> → <strong>Alertas de Inventario</strong></li>
+      <li>Establece <strong>Stock Mínimo</strong> por producto</li>
+      <li>Configura <strong>Punto de Reorden</strong></li>
+      <li>Activa <strong>Notificaciones Automáticas</strong></li>
+      <li>Define destinatarios de las alertas</li>
+    </ul>
+
+    <h3>📧 Tipos de notificaciones</h3>
+    <ul>
+      <li><strong>Stock bajo:</strong> Cuando se acerca al mínimo</li>
+      <li><strong>Stock cero:</strong> Cuando se agota completamente</li>
+      <li><strong>Alta demanda:</strong> Productos que se agotan rápido</li>
+      <li><strong>Reorden sugerido:</strong> Cuándo y cuánto comprar</li>
+    </ul>
+
+    <h2>🛒 Opciones para manejar la situación</h2>
+    
+    <h3>📞 Con el cliente presente</h3>
+    <ul>
+      <li><strong>Ofrecer sustitutos:</strong> Productos similares disponibles</li>
+      <li><strong>Tomar pedido:</strong> Para entrega posterior</li>
+      <li><strong>Contactar proveedor:</strong> Ver disponibilidad inmediata</li>
+      <li><strong>Ofrecer preventa:</strong> Con descuento por espera</li>
+    </ul>
+
+    <h3>🔄 Gestión proactiva</h3>
+    <ul>
+      <li><strong>Revisar histórico:</strong> Patrones de venta del producto</li>
+      <li><strong>Contactar proveedor:</strong> Programar reabastecimiento</li>
+      <li><strong>Evaluar demanda:</strong> Si vale la pena mantener el producto</li>
+      <li><strong>Buscar alternativas:</strong> Otros proveedores o productos</li>
+    </ul>
+
+    <div class="warning">
+      <strong>⚠️ No vendas productos sin existencia sin:</strong>
+      <ul>
+        <li>Confirmar disponibilidad real del proveedor</li>
+        <li>Establecer fecha de entrega confiable</li>
+        <li>Informar claramente al cliente sobre la demora</li>
+        <li>Documentar el compromiso adquirido</li>
+      </ul>
+    </div>
+
+    <h2>📋 Proceso de reposición</h2>
+    
+    <h3>📊 Análisis de reposición</h3>
+    <ul>
+      <li><strong>Revisar rotación:</strong> Qué tan rápido se vende</li>
+      <li><strong>Evaluar rentabilidad:</strong> Margen de ganancia</li>
+      <li><strong>Considerar espacio:</strong> Costo de almacenamiento</li>
+      <li><strong>Analizar tendencias:</strong> Si sigue siendo demandado</li>
+    </ul>
+
+    <h3>🛒 Crear orden de compra</h3>
+    <ul>
+      <li>Desde el reporte, selecciona productos a reponer</li>
+      <li>Haz clic en <strong>Generar Orden de Compra</strong></li>
+      <li>El sistema sugiere cantidades basadas en:</li>
+      <li>- Histórico de ventas</li>
+      <li>- Stock mínimo configurado</li>
+      <li>- Políticas de inventario</li>
+    </ul>
+
+    <h2>🚫 Configurar restricciones de venta</h2>
+    
+    <h3>⚙️ Opciones del sistema</h3>
+    <ul>
+      <li><strong>Bloquear venta sin stock:</strong> Impide vender productos agotados</li>
+      <li><strong>Permitir venta con alerta:</strong> Avisa pero permite la venta</li>
+      <li><strong>Venta con reserva:</strong> Descuenta de próximas entradas</li>
+      <li><strong>Solo preventa:</strong> Requiere pago adelantado</li>
+    </ul>
+
+    <h3>🔧 Configuración por producto</h3>
+    <ul>
+      <li>Algunos productos críticos: Bloquear venta</li>
+      <li>Productos especiales: Solo con autorización</li>
+      <li>Productos estacionales: Permitir preventa</li>
+      <li>Productos descontinuados: Bloquear completamente</li>
+    </ul>
+
+    <h2>📊 Análisis de productos agotados</h2>
+    
+    <h3>📈 Métricas importantes</h3>
+    <ul>
+      <li><strong>Frecuencia de agotamiento:</strong> Qué tan seguido se agotan</li>
+      <li><strong>Tiempo de reposición:</strong> Cuánto tarda en llegar stock</li>
+      <li><strong>Ventas perdidas:</strong> Oportunidades perdidas por falta de stock</li>
+      <li><strong>Satisfacción del cliente:</strong> Impacto en la experiencia</li>
+    </ul>
+
+    <h3>🎯 Optimización</h3>
+    <ul>
+      <li><strong>Ajustar stock mínimo:</strong> Basado en rotación real</li>
+      <li><strong>Mejorar predicción:</strong> Usar históricos y tendencias</li>
+      <li><strong>Diversificar proveedores:</strong> Reducir dependencia</li>
+      <li><strong>Negociar entregas:</strong> Más frecuentes y rápidas</li>
+    </ul>
+
+    <h2>🎁 Estrategias comerciales</h2>
+    
+    <h3>💡 Alternativas para el cliente</h3>
+    <ul>
+      <li><strong>Productos sustitutos:</strong> Similares disponibles</li>
+      <li><strong>Combos atractivos:</strong> Con productos disponibles</li>
+      <li><strong>Descuentos especiales:</strong> En productos con stock</li>
+      <li><strong>Programa de notificación:</strong> Avisar cuando llegue</li>
+    </ul>
+
+    <h3>📞 Comunicación proactiva</h3>
+    <ul>
+      <li><strong>Lista de espera:</strong> Contactar cuando llegue el producto</li>
+      <li><strong>WhatsApp/Email:</strong> Notificaciones automáticas</li>
+      <li><strong>Redes sociales:</strong> Anunciar llegada de productos</li>
+      <li><strong>Llamadas directas:</strong> A clientes frecuentes</li>
+    </ul>
+
+    <div class="tip">
+      <strong>💡 Convertir el problema en oportunidad:</strong>
+      <ul>
+        <li>Ofrece productos premium como alternativa</li>
+        <li>Crea urgencia con ofertas limitadas</li>
+        <li>Fideliza con descuentos por espera</li>
+        <li>Usa la oportunidad para conocer mejor al cliente</li>
+      </ul>
+    </div>
+
+    <h2>📱 Herramientas digitales</h2>
+    
+    <h3>🔔 Notificaciones automáticas</h3>
+    <ul>
+      <li><strong>SMS:</strong> Para productos críticos</li>
+      <li><strong>Email:</strong> Boletines de disponibilidad</li>
+      <li><strong>Push notifications:</strong> En apps móviles</li>
+      <li><strong>WhatsApp Business:</strong> Mensajes automatizados</li>
+    </ul>
+
+    <h3>🌐 Integración online</h3>
+    <ul>
+      <li><strong>Sitio web:</strong> Mostrar disponibilidad en tiempo real</li>
+      <li><strong>E-commerce:</strong> Productos "próximamente"</li>
+      <li><strong>Marketplace:</strong> Sincronización de inventarios</li>
+      <li><strong>Catálogo digital:</strong> Con estados de disponibilidad</li>
+    </ul>
+
+    <h2>📋 Mejores prácticas</h2>
+    <ul>
+      <li><strong>Monitoreo constante:</strong> Revisa diariamente productos sin stock</li>
+      <li><strong>Planificación anticipada:</strong> Ordena antes de agotar</li>
+      <li><strong>Comunicación clara:</strong> Informa honestamente al cliente</li>
+      <li><strong>Alternativas preparadas:</strong> Ten opciones de sustitución</li>
+      <li><strong>Seguimiento post-venta:</strong> Contacta cuando llegue el producto</li>
+      <li><strong>Análisis continuo:</strong> Mejora constantemente las predicciones</li>
+    </ul>
+
+    <a href="../faqs.html" class="btn-back">← Volver a Preguntas Frecuentes</a>
+  </main>
+
+</body>
+</html>

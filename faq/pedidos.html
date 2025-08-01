@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Cómo manejar pedidos en SIP5 WEB? | FAQ ESG</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+  <link rel="shortcut icon" href="../assets/img/logo/favicon.png" type="image/x-icon" />
+  <style>
+    :root {
+      --primary: #2d488a;
+      --secondary: #71b9d3;
+      --bg-light: #f7fafc;
+      --text-dark: #2d3748;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #012e5e 0%, #000 60%);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--bg-light);
+    }
+    h2 {
+      color: var(--primary);
+      margin-top: 2rem;
+    }
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .tip {
+      background: #e6f0fa;
+      border-left: 4px solid var(--primary);
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .warning {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn-back:hover {
+      background: var(--secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>¿Cómo manejar pedidos en SIP5 WEB?</h1>
+  </header>
+
+  <main class="container">
+    <p>Los pedidos permiten gestionar solicitudes de clientes, controlar entregas, y planificar el inventario de manera eficiente antes de convertirse en ventas.</p>
+
+    <h2>📋 ¿Qué son los pedidos?</h2>
+    <p>Un pedido es una solicitud formal de productos que:</p>
+    <ul>
+      <li>Registra la intención de compra del cliente</li>
+      <li>Reserva productos para entrega futura</li>
+      <li>Permite planificar compras y producción</li>
+      <li>Se convierte en venta al momento de entrega</li>
+      <li>Facilita el control de compromisos comerciales</li>
+    </ul>
+
+    <h2>🔍 Acceder al módulo de pedidos</h2>
+    <ul>
+      <li>Ve al menú <strong>Ventas</strong> o <strong>Pedidos</strong></li>
+      <li>Selecciona <strong>Nuevo Pedido</strong> o <strong>Gestión de Pedidos</strong></li>
+      <li>También puede estar en <strong>CRM</strong> → <strong>Pedidos</strong></li>
+    </ul>
+
+    <h2>📝 Crear un nuevo pedido</h2>
+    
+    <h3>👤 Información del cliente</h3>
+    <ul>
+      <li><strong>Cliente:</strong> Seleccionar cliente existente o crear nuevo</li>
+      <li><strong>Contacto:</strong> Persona que realiza el pedido</li>
+      <li><strong>Teléfono:</strong> Para coordinar entrega</li>
+      <li><strong>Dirección de entrega:</strong> Dónde se enviará el pedido</li>
+    </ul>
+
+    <h3>📅 Datos del pedido</h3>
+    <ul>
+      <li><strong>Fecha del pedido:</strong> Cuándo se tomó el pedido</li>
+      <li><strong>Fecha de entrega:</strong> Cuándo se debe entregar</li>
+      <li><strong>Vendedor:</strong> Responsable del pedido</li>
+      <li><strong>Prioridad:</strong> Normal, urgente, alta prioridad</li>
+      <li><strong>Observaciones:</strong> Notas especiales del cliente</li>
+    </ul>
+
+    <div class="tip">
+      <strong>💡 Consejos para tomar pedidos:</strong>
+      <ul>
+        <li>Confirma disponibilidad antes de prometer fechas</li>
+        <li>Registra todas las especificaciones del cliente</li>
+        <li>Calcula tiempos de entrega realistas</li>
+        <li>Documenta condiciones especiales acordadas</li>
+      </ul>
+    </div>
+
+    <h2>🛒 Agregar productos al pedido</h2>
+    <ul>
+      <li><strong>Buscar producto:</strong> Por código o nombre</li>
+      <li><strong>Cantidad:</strong> Cantidad solicitada por el cliente</li>
+      <li><strong>Precio:</strong> Precio acordado (puede ser especial)</li>
+      <li><strong>Descuentos:</strong> Descuentos aplicables</li>
+      <li><strong>Fecha de entrega:</strong> Si es diferente por producto</li>
+      <li><strong>Observaciones:</strong> Especificaciones del producto</li>
+    </ul>
+
+    <h2>📊 Estados del pedido</h2>
+    
+    <h3>🔄 Ciclo de vida</h3>
+    <ul>
+      <li><strong>Pendiente:</strong> Recién creado, esperando procesamiento</li>
+      <li><strong>Confirmado:</strong> Cliente ha confirmado el pedido</li>
+      <li><strong>En proceso:</strong> Se está preparando el pedido</li>
+      <li><strong>Listo:</strong> Pedido preparado, esperando entrega</li>
+      <li><strong>Entregado:</strong> Pedido entregado al cliente</li>
+      <li><strong>Facturado:</strong> Se ha generado la factura</li>
+      <li><strong>Cancelado:</strong> Pedido cancelado por cualquier motivo</li>
+    </ul>
+
+    <h3>⏭️ Cambio de estados</h3>
+    <ul>
+      <li>Selecciona el pedido en la lista</li>
+      <li>Haz clic en <strong>Cambiar Estado</strong></li>
+      <li>Elige el nuevo estado apropiado</li>
+      <li>Agrega comentarios sobre el cambio</li>
+      <li>Notifica al cliente si es necesario</li>
+    </ul>
+
+    <h2>📦 Gestión de entregas</h2>
+    
+    <h3>📅 Programar entregas</h3>
+    <ul>
+      <li>Ve a <strong>Pedidos</strong> → <strong>Programar Entregas</strong></li>
+      <li>Filtra por fecha de entrega</li>
+      <li>Agrupa pedidos por ruta o zona</li>
+      <li>Asigna vehículo y conductor</li>
+      <li>Imprime guías de entrega</li>
+    </ul>
+
+    <h3>🚚 Control de entregas</h3>
+    <ul>
+      <li><strong>Guía de remisión:</strong> Documento para el transporte</li>
+      <li><strong>Lista de empaque:</strong> Productos incluidos</li>
+      <li><strong>Confirmación de entrega:</strong> Firma del cliente</li>
+      <li><strong>Registro de hora:</strong> Cuándo se entregó</li>
+    </ul>
+
+    <div class="warning">
+      <strong>⚠️ Control de entregas:</strong>
+      <ul>
+        <li>Verifica que todos los productos estén incluidos</li>
+        <li>Confirma dirección de entrega antes de salir</li>
+        <li>Lleva contacto del cliente para coordinación</li>
+        <li>Registra cualquier novedad durante la entrega</li>
+      </ul>
+    </div>
+
+    <h2>💰 Facturación de pedidos</h2>
+    
+    <h3>🧾 Convertir a venta</h3>
+    <ul>
+      <li>Selecciona el pedido entregado</li>
+      <li>Haz clic en <strong>Facturar Pedido</strong></li>
+      <li>Verifica datos del cliente y productos</li>
+      <li>Aplica forma de pago acordada</li>
+      <li>Genera la factura correspondiente</li>
+    </ul>
+
+    <h3>📋 Facturación parcial</h3>
+    <ul>
+      <li>Si se entrega parcialmente, selecciona productos entregados</li>
+      <li>Factura solo lo entregado</li>
+      <li>El resto queda pendiente en el pedido</li>
+      <li>Repite proceso cuando se complete la entrega</li>
+    </ul>
+
+    <h2>📊 Reportes de pedidos</h2>
+    
+    <h3>📈 Reportes operativos</h3>
+    <ul>
+      <li><strong>Pedidos pendientes:</strong> Qué falta por entregar</li>
+      <li><strong>Entregas del día:</strong> Programación diaria</li>
+      <li><strong>Pedidos por vendedor:</strong> Rendimiento del equipo</li>
+      <li><strong>Análisis de tiempos:</strong> Cumplimiento de fechas</li>
+    </ul>
+
+    <h3>💹 Reportes comerciales</h3>
+    <ul>
+      <li><strong>Volumen de pedidos:</strong> Tendencias de demanda</li>
+      <li><strong>Pedidos por cliente:</strong> Principales compradores</li>
+      <li><strong>Productos más pedidos:</strong> Análisis de demanda</li>
+      <li><strong>Conversión pedido-venta:</strong> Efectividad del proceso</li>
+    </ul>
+
+    <h2>🔄 Modificar pedidos</h2>
+    
+    <h3>✏️ Cambios permitidos</h3>
+    <ul>
+      <li><strong>Antes de confirmar:</strong> Cualquier cambio</li>
+      <li><strong>Confirmado:</strong> Cambios menores con autorización</li>
+      <li><strong>En proceso:</strong> Solo cambios urgentes</li>
+      <li><strong>Listo/Entregado:</strong> No se pueden modificar</li>
+    </ul>
+
+    <h3>📝 Proceso de modificación</h3>
+    <ul>
+      <li>Contacta al cliente para confirmar cambios</li>
+      <li>Verifica disponibilidad de nuevos productos</li>
+      <li>Actualiza fechas si es necesario</li>
+      <li>Documenta razón del cambio</li>
+      <li>Notifica a producción/bodega si aplica</li>
+    </ul>
+
+    <h2>❌ Cancelar pedidos</h2>
+    <ul>
+      <li><strong>Por cliente:</strong> Cliente ya no requiere el pedido</li>
+      <li><strong>Por disponibilidad:</strong> No hay stock suficiente</li>
+      <li><strong>Por incumplimiento:</strong> Cliente no cumple condiciones</li>
+      <li><strong>Por empresa:</strong> Problemas operativos internos</li>
+    </ul>
+
+    <h2>📱 Notificaciones automáticas</h2>
+    <ul>
+      <li><strong>Confirmación:</strong> Pedido recibido correctamente</li>
+      <li><strong>Preparación:</strong> Pedido en proceso</li>
+      <li><strong>Listo para entrega:</strong> Pedido preparado</li>
+      <li><strong>En camino:</strong> Pedido despachado</li>
+      <li><strong>Entregado:</strong> Confirmación de entrega</li>
+    </ul>
+
+    <h2>📋 Mejores prácticas</h2>
+    <ul>
+      <li><strong>Confirma disponibilidad:</strong> Antes de prometer fechas</li>
+      <li><strong>Comunícate constantemente:</strong> Mantén informado al cliente</li>
+      <li><strong>Documenta todo:</strong> Especificaciones y acuerdos</li>
+      <li><strong>Cumple fechas:</strong> Respeta los tiempos prometidos</li>
+      <li><strong>Sigue el proceso:</strong> Actualiza estados correctamente</li>
+      <li><strong>Registra novidades:</strong> Problemas o cambios durante el proceso</li>
+    </ul>
+
+    <a href="../faqs.html" class="btn-back">← Volver a Preguntas Frecuentes</a>
+  </main>
+
+</body>
+</html>

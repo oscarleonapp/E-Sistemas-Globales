@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Cómo hacer traslados en SIP5 WEB? | FAQ ESG</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+  <link rel="shortcut icon" href="../assets/img/logo/favicon.png" type="image/x-icon" />
+  <style>
+    :root {
+      --primary: #2d488a;
+      --secondary: #71b9d3;
+      --bg-light: #f7fafc;
+      --text-dark: #2d3748;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #012e5e 0%, #000 60%);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--bg-light);
+    }
+    h2 {
+      color: var(--primary);
+      margin-top: 2rem;
+    }
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .tip {
+      background: #e6f0fa;
+      border-left: 4px solid var(--primary);
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .warning {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn-back:hover {
+      background: var(--secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>¿Cómo hacer traslados en SIP5 WEB?</h1>
+  </header>
+
+  <main class="container">
+    <p>Los traslados permiten mover productos entre diferentes ubicaciones, sucursales o bodegas, manteniendo el control exacto del inventario en cada punto.</p>
+
+    <h2>🔄 ¿Qué son los traslados?</h2>
+    <p>Son movimientos de productos que:</p>
+    <ul>
+      <li>Mueven inventario entre ubicaciones</li>
+      <li>Mantienen el control de existencias</li>
+      <li>Registran salida en origen y entrada en destino</li>
+      <li>Generan documentos de respaldo</li>
+      <li>Permiten seguimiento del inventario en tránsito</li>
+    </ul>
+
+    <h2>🏢 Tipos de traslados</h2>
+    
+    <h3>🏪 Entre sucursales</h3>
+    <ul>
+      <li>De una tienda a otra</li>
+      <li>Entre diferentes puntos de venta</li>
+      <li>Para equilibrar inventarios</li>
+      <li>Según demanda por ubicación</li>
+    </ul>
+
+    <h3>📦 Entre bodegas</h3>
+    <ul>
+      <li>De bodega principal a bodega local</li>
+      <li>Entre diferentes almacenes</li>
+      <li>Reorganización de espacios</li>
+      <li>Optimización de ubicaciones</li>
+    </ul>
+
+    <h3>🛒 Entre departamentos</h3>
+    <ul>
+      <li>De área de recepción a piso de venta</li>
+      <li>Entre diferentes secciones</li>
+      <li>Cambios de ubicación interna</li>
+      <li>Reclasificación de productos</li>
+    </ul>
+
+    <div class="tip">
+      <strong>💡 Planifica los traslados:</strong>
+      <ul>
+        <li>Analiza la demanda por ubicación</li>
+        <li>Considera costos de transporte</li>
+        <li>Optimiza rutas y frecuencias</li>
+        <li>Mantén stock de seguridad en cada punto</li>
+      </ul>
+    </div>
+
+    <h2>📝 Crear un traslado</h2>
+    
+    <h3>🔍 Acceso al módulo</h3>
+    <ul>
+      <li>Ve al menú <strong>Inventario</strong> o <strong>Traslados</strong></li>
+      <li>Selecciona <strong>Nuevo Traslado</strong></li>
+      <li>También puede estar en <strong>Movimientos</strong></li>
+    </ul>
+
+    <h3>📋 Información básica</h3>
+    <ul>
+      <li><strong>Fecha del traslado:</strong> Cuándo se realiza</li>
+      <li><strong>Origen:</strong> Sucursal/bodega de salida</li>  
+      <li><strong>Destino:</strong> Sucursal/bodega de llegada</li>
+      <li><strong>Responsable:</strong> Persona que autoriza</li>
+      <li><strong>Motivo:</strong> Razón del traslado</li>
+      <li><strong>Observaciones:</strong> Notas adicionales</li>
+    </ul>
+
+    <h3>📦 Agregar productos</h3>
+    <ul>
+      <li><strong>Seleccionar producto:</strong> De la ubicación origen</li>
+      <li><strong>Cantidad:</strong> Cuántas unidades trasladar</li>
+      <li><strong>Verificar stock:</strong> Disponibilidad en origen</li>
+      <li><strong>Costo unitario:</strong> Para valorización</li>
+      <li><strong>Observaciones:</strong> Condiciones especiales</li>
+    </ul>
+
+    <h2>📊 Estados del traslado</h2>
+    
+    <h3>🔄 Flujo del proceso</h3>
+    <ul>
+      <li><strong>Solicitado:</strong> Traslado creado, pendiente autorización</li>
+      <li><strong>Autorizado:</strong> Aprobado para ejecución</li>
+      <li><strong>En tránsito:</strong> Productos despachados, en camino</li>
+      <li><strong>Recibido:</strong> Productos llegaron al destino</li>
+      <li><strong>Completado:</strong> Traslado finalizado correctamente</li>
+      <li><strong>Cancelado:</strong> Traslado anulado</li>
+    </ul>
+
+    <h3>⚡ Cambio de estados</h3>
+    <ul>
+      <li>Cada cambio actualiza automáticamente el inventario</li>
+      <li>Se generan documentos para cada etapa</li>
+      <li>El sistema registra fecha/hora de cada cambio</li>
+      <li>Se mantiene trazabilidad completa</li>
+    </ul>
+
+    <div class="warning">
+      <strong>⚠️ Control de inventario:</strong>
+      <ul>
+        <li>Al autorizar: Se descuenta del origen</li>
+        <li>En tránsito: Inventario separado "en camino"</li>
+        <li>Al recibir: Se suma al destino</li>
+        <li>Si se cancela: Se reversan los movimientos</li>
+      </ul>
+    </div>
+
+    <h2>🚚 Proceso de envío</h2>
+    
+    <h3>📋 Preparar el traslado</h3>
+    <ul>
+      <li><strong>Lista de empaque:</strong> Productos a trasladar</li>
+      <li><strong>Guía de remisión:</strong> Documento de transporte</li>
+      <li><strong>Verificación física:</strong> Contar productos</li>
+      <li><strong>Embalaje:</strong> Proteger productos en tránsito</li>
+    </ul>
+
+    <h3>🚛 Despacho</h3>
+    <ul>
+      <li>Cambiar estado a <strong>En Tránsito</strong></li>
+      <li>Registrar datos del transporte</li>
+      <li>Imprimir documentos de envío</li>
+      <li>Notificar al destino sobre el envío</li>
+    </ul>
+
+    <h2>📥 Proceso de recepción</h2>
+    
+    <h3>🔍 Verificar recepción</h3>
+    <ul>
+      <li><strong>Contar productos:</strong> Verificar cantidades</li>
+      <li><strong>Revisar estado:</strong> Condición de los productos</li>
+      <li><strong>Comparar documentos:</strong> Vs lo enviado</li>
+      <li><strong>Registrar novedades:</strong> Faltantes o daños</li>
+    </ul>
+
+    <h3>✅ Confirmar recepción</h3>
+    <ul>
+      <li>Cambiar estado a <strong>Recibido</strong></li>
+      <li>Actualizar inventario en destino</li>
+      <li>Generar acta de recepción</li>
+      <li>Notificar al origen sobre la recepción</li>
+    </ul>
+
+    <h2>📊 Reportes de traslados</h2>
+    
+    <h3>📈 Reportes operativos</h3>
+    <ul>
+      <li><strong>Traslados pendientes:</strong> En proceso</li>
+      <li><strong>Productos en tránsito:</strong> Inventario en camino</li>
+      <li><strong>Historial de traslados:</strong> Movimientos realizados</li>
+      <li><strong>Tiempos de traslado:</strong> Eficiencia del proceso</li>
+    </ul>
+
+    <h3>💰 Reportes de costos</h3>
+    <ul>
+      <li><strong>Costo de traslados:</strong> Gastos por movimiento</li>
+      <li><strong>Análisis por ruta:</strong> Eficiencia de rutas</li>
+      <li><strong>Valorización:</strong> Valor de productos trasladados</li>
+      <li><strong>Frecuencia:</strong> Movimientos por período</li>
+    </ul>
+
+    <h2>🔄 Traslados automáticos</h2>
+    
+    <h3>⚙️ Configuración automática</h3>
+    <ul>
+      <li><strong>Puntos de reorden:</strong> Cuando el stock baja</li>
+      <li><strong>Balanceo automático:</strong> Equilibrar inventarios</li>
+      <li><strong>Traslados programados:</strong> Rutinas periódicas</li>
+      <li><strong>Por demanda:</strong> Según patrones de venta</li>
+    </ul>
+
+    <h3>🎯 Reglas de negocio</h3>
+    <ul>
+      <li>Trasladar X cantidad cuando stock < mínimo</li>
+      <li>Balancear semanalmente entre sucursales</li>
+      <li>Mover productos de baja rotación</li>
+      <li>Redistribuir según ventas históricas</li>
+    </ul>
+
+    <h2>❌ Cancelar traslados</h2>
+    
+    <h3>🚫 Cuándo cancelar</h3>
+    <ul>
+      <li><strong>Error en solicitud:</strong> Productos o cantidades incorrectas</li>
+      <li><strong>Falta de stock:</strong> Inventario insuficiente en origen</li>
+      <li><strong>Cambio de prioridades:</strong> Ya no es necesario</li>
+      <li><strong>Problemas de transporte:</strong> No se puede realizar</li>
+    </ul>
+
+    <h3>🔄 Proceso de cancelación</h3>
+    <ul>
+      <li>Solo se pueden cancelar traslados no despachados</li>
+      <li>El sistema reversa automáticamente los movimientos</li>
+      <li>Se documenta la razón de la cancelación</li>
+      <li>Se notifica a todas las partes involucradas</li>
+    </ul>
+
+    <div class="tip">
+      <strong>💡 Optimización de traslados:</strong>
+      <ul>
+        <li>Agrupa traslados para optimizar transporte</li>
+        <li>Programa traslados en horarios de menor demanda</li>
+        <li>Mantén productos de alta rotación en cada ubicación</li>
+        <li>Usa análisis de demanda para anticipar necesidades</li>
+      </ul>
+    </div>
+
+    <h2>📱 Seguimiento en tiempo real</h2>
+    
+    <h3>📍 Trazabilidad</h3>
+    <ul>
+      <li><strong>Estado actual:</strong> Dónde está el traslado</li>
+      <li><strong>Tiempo estimado:</strong> Cuándo llegará</li>
+      <li><strong>Historial:</strong> Todos los cambios registrados</li>
+      <li><strong>Responsables:</strong> Quién maneja cada etapa</li>
+    </ul>
+
+    <h3>🔔 Notificaciones</h3>
+    <ul>
+      <li><strong>Autorización requerida:</strong> Para aprobar traslados</li>
+      <li><strong>Despachado:</strong> Cuando sale de origen</li>
+      <li><strong>En camino:</strong> Actualizaciones de transporte</li>
+      <li><strong>Recibido:</strong> Confirmación de llegada</li>
+    </ul>
+
+    <h2>📋 Mejores prácticas</h2>
+    <ul>
+      <li><strong>Planifica con anticipación:</strong> Evita traslados urgentes</li>
+      <li><strong>Verifica stock:</strong> Antes de autorizar traslados</li>
+      <li><strong>Documenta todo:</strong> Mantén trazabilidad completa</li>
+      <li><strong>Optimiza rutas:</strong> Reduce costos de transporte</li>
+      <li><strong>Capacita al personal:</strong> En procedimientos correctos</li>
+      <li><strong>Monitorea constantemente:</strong> Estado de todos los traslados</li>
+    </ul>
+
+    <a href="../faqs.html" class="btn-back">← Volver a Preguntas Frecuentes</a>
+  </main>
+
+</body>
+</html>

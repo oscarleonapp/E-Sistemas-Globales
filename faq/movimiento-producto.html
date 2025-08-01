@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Cómo consultar movimiento de productos en SIP5 WEB? | FAQ ESG</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+  <link rel="shortcut icon" href="../assets/img/logo/favicon.png" type="image/x-icon" />
+  <style>
+    :root {
+      --primary: #2d488a;
+      --secondary: #71b9d3;
+      --bg-light: #f7fafc;
+      --text-dark: #2d3748;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #012e5e 0%, #000 60%);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--bg-light);
+    }
+    h2 {
+      color: var(--primary);
+      margin-top: 2rem;
+    }
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .tip {
+      background: #e6f0fa;
+      border-left: 4px solid var(--primary);
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .warning {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn-back:hover {
+      background: var(--secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>¿Cómo consultar movimiento de productos en SIP5 WEB?</h1>
+  </header>
+
+  <main class="container">
+    <p>El reporte de movimiento de productos te permite rastrear todas las transacciones de entrada y salida, analizando el flujo de inventario en tu negocio.</p>
+
+    <h2>📊 ¿Qué son los movimientos de productos?</h2>
+    <p>Son todas las transacciones que afectan el inventario:</p>
+    <ul>
+      <li>Entradas por compras</li>
+      <li>Salidas por ventas</li>
+      <li>Ajustes de inventario</li>
+      <li>Traslados entre ubicaciones</li>
+      <li>Devoluciones de clientes</li>
+      <li>Devoluciones a proveedores</li>
+      <li>Mermas y desperdicios</li>
+    </ul>
+
+    <h2>🔍 Acceder al reporte</h2>
+    <ul>
+      <li>Ve al menú <strong>Inventario</strong> o <strong>Reportes</strong></li>
+      <li>Busca <strong>Movimientos de Productos</strong></li>
+      <li>También puede estar en <strong>Kardex</strong> o <strong>Trazabilidad</strong></li>
+    </ul>
+
+    <h2>🎯 Filtros de consulta</h2>
+    
+    <h3>📅 Por período</h3>
+    <ul>
+      <li><strong>Fecha inicial:</strong> Desde cuándo consultar</li>
+      <li><strong>Fecha final:</strong> Hasta cuándo consultar</li>
+      <li><strong>Rango rápido:</strong> Hoy, esta semana, este mes</li>
+      <li><strong>Último año:</strong> Para análisis de tendencias</li>
+    </ul>
+
+    <h3>📦 Por producto</h3>
+    <ul>
+      <li><strong>Producto específico:</strong> Buscar por código o nombre</li>
+      <li><strong>Categoría:</strong> Todos los productos de una categoría</li>
+      <li><strong>Proveedor:</strong> Productos de un proveedor específico</li>
+      <li><strong>Marca:</strong> Por marca comercial</li>
+    </ul>
+
+    <h3>🔄 Por tipo de movimiento</h3>
+    <ul>
+      <li><strong>Entradas:</strong> Solo compras y ajustes positivos</li>
+      <li><strong>Salidas:</strong> Solo ventas y ajustes negativos</li>
+      <li><strong>Ajustes:</strong> Correcciones de inventario</li>
+      <li><strong>Traslados:</strong> Movimientos entre ubicaciones</li>
+      <li><strong>Todos:</strong> Todos los tipos de movimiento</li>
+    </ul>
+
+    <div class="tip">
+      <strong>💡 Filtros efectivos:</strong>
+      <ul>
+        <li>Usa períodos cortos para análisis detallados</li>
+        <li>Filtra por producto para seguimiento específico</li>
+        <li>Combina filtros para búsquedas precisas</li>
+        <li>Guarda filtros frecuentes como favoritos</li>
+      </ul>
+    </div>
+
+    <h2>📋 Información mostrada</h2>
+    
+    <h3>📅 Datos del movimiento</h3>
+    <ul>
+      <li><strong>Fecha:</strong> Cuándo ocurrió el movimiento</li>
+      <li><strong>Hora:</strong> Momento exacto de la transacción</li>
+      <li><strong>Tipo:</strong> Entrada, salida, ajuste, traslado</li>
+      <li><strong>Documento:</strong> Factura, recibo, nota de ajuste</li>
+      <li><strong>Referencia:</strong> Número del documento</li>
+    </ul>
+
+    <h3>📊 Cantidades y valores</h3>
+    <ul>
+      <li><strong>Cantidad entrada:</strong> Productos que ingresaron</li>
+      <li><strong>Cantidad salida:</strong> Productos que salieron</li>
+      <li><strong>Saldo resultante:</strong> Existencia después del movimiento</li>
+      <li><strong>Costo unitario:</strong> Precio del producto</li>
+      <li><strong>Valor total:</strong> Cantidad × costo unitario</li>
+    </ul>
+
+    <h3>👥 Información adicional</h3>
+    <ul>
+      <li><strong>Usuario:</strong> Quién realizó la transacción</li>
+      <li><strong>Cliente/Proveedor:</strong> Tercero involucrado</li>
+      <li><strong>Sucursal:</strong> Ubicación del movimiento</li>
+      <li><strong>Observaciones:</strong> Notas del movimiento</li>
+    </ul>
+
+    <h2>📈 Análisis de movimientos</h2>
+    
+    <h3>🔍 Patrones de entrada</h3>
+    <ul>
+      <li><strong>Frecuencia de compras:</strong> Qué tan seguido compras</li>
+      <li><strong>Volúmenes:</strong> Cantidades típicas por compra</li>
+      <li><strong>Proveedores:</strong> De quién compras más</li>
+      <li><strong>Estacionalidad:</strong> Variaciones por época</li>
+    </ul>
+
+    <h3>🔍 Patrones de salida</h3>
+    <ul>
+      <li><strong>Velocidad de rotación:</strong> Qué tan rápido se vende</li>
+      <li><strong>Picos de demanda:</strong> Días/horas de mayor venta</li>
+      <li><strong>Clientes frecuentes:</strong> Quién compra más</li>
+      <li><strong>Tendencias:</strong> Crecimiento o decrecimiento</li>
+    </ul>
+
+    <div class="warning">
+      <strong>⚠️ Detectar anomalías:</strong>
+      <ul>
+        <li>Movimientos en horarios inusuales</li>
+        <li>Cantidades fuera de lo normal</li>
+        <li>Ajustes frecuentes del mismo producto</li>
+        <li>Diferencias entre entradas y salidas registradas</li>
+      </ul>
+    </div>
+
+    <h2>📊 Reportes especializados</h2>
+    
+    <h3>📈 Reporte de rotación</h3>
+    <ul>
+      <li><strong>Productos de alta rotación:</strong> Más vendidos</li>
+      <li><strong>Productos de baja rotación:</strong> Menos movimiento</li>
+      <li><strong>Productos sin movimiento:</strong> Inventario muerto</li>
+      <li><strong>Tiempo promedio de rotación:</strong> Días en inventario</li>
+    </ul>
+
+    <h3>💰 Análisis de costos</h3>
+    <ul>
+      <li><strong>PEPS:</strong> Primero en entrar, primero en salir</li>
+      <li><strong>Promedio ponderado:</strong> Costo promedio</li>
+      <li><strong>Últimas entradas:</strong> Costos más recientes</li>
+      <li><strong>Valorización:</strong> Valor del inventario actual</li>
+    </ul>
+
+    <h2>🔄 Movimientos automáticos</h2>
+    
+    <h3>⚙️ Generados por el sistema</h3>
+    <ul>
+      <li><strong>Ventas:</strong> Salida automática al facturar</li>
+      <li><strong>Compras:</strong> Entrada automática al recibir</li>
+      <li><strong>Traslados:</strong> Salida de origen, entrada a destino</li>
+      <li><strong>Devoluciones:</strong> Reversa de movimientos originales</li>
+    </ul>
+
+    <h3>📋 Movimientos manuales</h3>
+    <ul>
+      <li><strong>Ajustes:</strong> Correcciones manuales</li>
+      <li><strong>Mermas:</strong> Registros de pérdidas</li>
+      <li><strong>Reclasificaciones:</strong> Cambios de categoría</li>
+      <li><strong>Inventarios iniciales:</strong> Saldos de apertura</li>
+    </ul>
+
+    <h2>📤 Exportar datos</h2>
+    
+    <h3>📊 Formatos disponibles</h3>
+    <ul>
+      <li><strong>Excel:</strong> Para análisis avanzado</li>
+      <li><strong>PDF:</strong> Para reportes ejecutivos</li>
+      <li><strong>CSV:</strong> Para importar a otros sistemas</li>
+      <li><strong>Imprimir:</strong> Copia física</li>
+    </ul>
+
+    <h3>🎯 Usos de la exportación</h3>
+    <ul>
+      <li><strong>Análisis en Excel:</strong> Tablas dinámicas y gráficos</li>
+      <li><strong>Auditorías:</strong> Respaldo para revisiones</li>
+      <li><strong>Contabilidad:</strong> Conciliación de inventarios</li>
+      <li><strong>Gerencia:</strong> Reportes de gestión</li>
+    </ul>
+
+    <h2>⏱️ Consultas en tiempo real</h2>
+    
+    <h3>🔄 Actualización automática</h3>
+    <ul>
+      <li>Los movimientos se registran inmediatamente</li>
+      <li>Los saldos se actualizan en tiempo real</li>
+      <li>Los reportes reflejan la situación actual</li>
+      <li>No hay demora en la información</li>
+    </ul>
+
+    <h3>📱 Acceso móvil</h3>
+    <ul>
+      <li><strong>Desde tablet:</strong> Consultas en bodega</li>
+      <li><strong>Desde smartphone:</strong> Verificaciones rápidas</li>
+      <li><strong>Aplicación web:</strong> Acceso desde cualquier lugar</li>
+      <li><strong>Notificaciones:</strong> Alertas de movimientos importantes</li>
+    </ul>
+
+    <div class="tip">
+      <strong>💡 Análisis efectivo:</strong>
+      <ul>
+        <li>Compara períodos similares (mes actual vs mes anterior)</li>
+        <li>Identifica productos con comportamiento inusual</li>
+        <li>Analiza la efectividad de promociones y descuentos</li>
+        <li>Usa los datos para planificar compras futuras</li>
+      </ul>
+    </div>
+
+    <h2>🎯 Casos de uso comunes</h2>
+    
+    <h3>🔍 Investigaciones</h3>
+    <ul>
+      <li><strong>Diferencias de inventario:</strong> Rastrear discrepancias</li>
+      <li><strong>Pérdidas:</strong> Identificar productos faltantes</li>
+      <li><strong>Errores:</strong> Encontrar transacciones incorrectas</li>
+      <li><strong>Fraudes:</strong> Detectar actividades sospechosas</li>
+    </ul>
+
+    <h3>📊 Análisis comercial</h3>
+    <ul>
+      <li><strong>Planificación de compras:</strong> Basada en históricos</li>
+      <li><strong>Optimización de inventario:</strong> Reducir costos</li>
+      <li><strong>Análisis de demanda:</strong> Tendencias de consumo</li>
+      <li><strong>Evaluación de proveedores:</strong> Frecuencia y volúmenes</li>
+    </ul>
+
+    <h2>📋 Mejores prácticas</h2>
+    <ul>
+      <li><strong>Consulta regular:</strong> Revisa movimientos diariamente</li>
+      <li><strong>Investiga anomalías:</strong> No ignores movimientos extraños</li>
+      <li><strong>Documenta hallazgos:</strong> Mantén registro de investigaciones</li>
+      <li><strong>Usa filtros:</strong> Para consultas más efectivas</li>
+      <li><strong>Exporta datos:</strong> Para análisis profundo</li>
+      <li><strong>Capacita al equipo:</strong> En interpretación de reportes</li>
+    </ul>
+
+    <a href="../faqs.html" class="btn-back">← Volver a Preguntas Frecuentes</a>
+  </main>
+
+</body>
+</html>
