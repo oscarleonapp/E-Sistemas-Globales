@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Cómo aperturar turno en SIP5 WEB? | FAQ ESG</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+  <link rel="shortcut icon" href="../assets/img/logo/favicon.png" type="image/x-icon" />
+  <style>
+    :root {
+      --primary: #2d488a;
+      --secondary: #71b9d3;
+      --bg-light: #f7fafc;
+      --text-dark: #2d3748;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #012e5e 0%, #000 60%);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--bg-light);
+    }
+    h2 {
+      color: var(--primary);
+      margin-top: 2rem;
+    }
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .tip {
+      background: #e6f0fa;
+      border-left: 4px solid var(--primary);
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .warning {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn-back:hover {
+      background: var(--secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>¿Cómo aperturar turno en SIP5 WEB?</h1>
+  </header>
+
+  <main class="container">
+    <p>La apertura de turno es fundamental para el control de caja y ventas. Sigue estos pasos para aperturar correctamente un turno en SIP5 WEB.</p>
+
+    <h2>🚪 Acceder a apertura de turno</h2>
+    <ul>
+      <li>En el menú principal, busca <strong>Caja</strong> o <strong>Turnos</strong>.</li>
+      <li>Selecciona <strong>"Aperturar Turno"</strong>.</li>
+      <li>Si ya hay un turno abierto, primero deberás cerrarlo.</li>
+    </ul>
+
+    <h2>📅 Información del turno</h2>
+    <ul>
+      <li><strong>Fecha:</strong> Selecciona la fecha del turno (normalmente la fecha actual).</li>
+      <li><strong>Hora de inicio:</strong> Se registra automáticamente al aperturar.</li>
+      <li><strong>Usuario:</strong> Se asigna automáticamente al usuario logueado.</li>
+      <li><strong>Caja/Terminal:</strong> Selecciona la caja correspondiente.</li>
+    </ul>
+
+    <div class="tip">
+      <strong>💡 Antes de aperturar:</strong>
+      <ul>
+        <li>Verifica que el turno anterior esté cerrado correctamente.</li>
+        <li>Cuenta el dinero físico que tienes en caja.</li>
+        <li>Asegúrate de tener suficiente cambio.</li>
+      </ul>
+    </div>
+
+    <h2>💰 Fondo inicial de caja</h2>
+    <ul>
+      <li><strong>Efectivo:</strong> Ingresa la cantidad exacta de dinero en caja.</li>
+      <li><strong>Billetes:</strong> Detalla la cantidad por denominación si es requerido.</li>
+      <li><strong>Monedas:</strong> Especifica las monedas disponibles para cambio.</li>
+      <li><strong>Total inicial:</strong> El sistema calculará el total automáticamente.</li>
+    </ul>
+
+    <h2>🎫 Configuración de documentos</h2>
+    <ul>
+      <li><strong>Serie de facturas:</strong> Verifica que esté configurada correctamente.</li>
+      <li><strong>Numeración:</strong> Confirma desde qué número comenzar.</li>
+      <li><strong>Tipos de documento:</strong> Activa facturas, recibos, etc.</li>
+      <li><strong>Impresora:</strong> Verifica que esté conectada y funcionando.</li>
+    </ul>
+
+    <div class="warning">
+      <strong>⚠️ Importante para facturación:</strong>
+      <ul>
+        <li>La serie debe estar autorizada por SAT.</li>
+        <li>Los correlativos no pueden tener saltos.</li>
+        <li>La impresora debe estar configurada correctamente.</li>
+      </ul>
+    </div>
+
+    <h2>⚙️ Configuraciones adicionales</h2>
+    <ul>
+      <li><strong>Descuentos:</strong> Define límites de descuentos permitidos.</li>
+      <li><strong>Formas de pago:</strong> Activa efectivo, tarjetas, cheques.</li>
+      <li><strong>Cambio de precios:</strong> Establece permisos para modificar precios.</li>
+      <li><strong>Productos sin existencia:</strong> Define si se pueden vender.</li>
+    </ul>
+
+    <h2>🔍 Verificación antes de confirmar</h2>
+    <ul>
+      <li>Revisa que el fondo inicial sea correcto.</li>
+      <li>Confirma que la configuración de documentos esté bien.</li>
+      <li>Verifica la fecha y hora del turno.</li>
+      <li>Asegúrate de tener todos los permisos necesarios.</li>
+    </ul>
+
+    <h2>✅ Confirmar apertura</h2>
+    <ul>
+      <li>Haz clic en <strong>"Aperturar Turno"</strong> o <strong>"Confirmar"</strong>.</li>
+      <li>El sistema registrará la apertura automáticamente.</li>
+      <li>Se generará un comprobante de apertura.</li>
+      <li>Imprime el comprobante y consérvalo.</li>
+    </ul>
+
+    <h2>📊 Después de la apertura</h2>
+    <ul>
+      <li><strong>Comprobante:</strong> Guarda el comprobante de apertura.</li>
+      <li><strong>Estado del turno:</strong> Verifica que aparezca como "Abierto".</li>
+      <li><strong>Funciones habilitadas:</strong> Confirma que puedes realizar ventas.</li>
+      <li><strong>Arqueo inicial:</strong> Registra el arqueo si es requerido.</li>
+    </ul>
+
+    <h2>❌ Problemas comunes</h2>
+    <ul>
+      <li><strong>Turno anterior abierto:</strong> Cierra el turno anterior primero.</li>
+      <li><strong>Sin permisos:</strong> Contacta al administrador.</li>
+      <li><strong>Error en serie:</strong> Verifica la configuración de documentos.</li>
+      <li><strong>Impresora no responde:</strong> Revisa conexión y configuración.</li>
+    </ul>
+
+    <h2>🕒 Horarios recomendados</h2>
+    <ul>
+      <li><strong>Apertura matutina:</strong> Al inicio de la jornada laboral.</li>
+      <li><strong>Cambio de turno:</strong> Cuando cambia el responsable.</li>
+      <li><strong>Apertura especial:</strong> Para eventos o ventas extraordinarias.</li>
+      <li><strong>Control:</strong> Nunca dejes un turno abierto por más de 24 horas.</li>
+    </ul>
+
+    <a href="../faqs.html" class="btn-back">← Volver a Preguntas Frecuentes</a>
+  </main>
+
+</body>
+</html>

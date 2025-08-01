@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Cómo consultar Kardex en SIP5 WEB? | FAQ ESG</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+  <link rel="shortcut icon" href="../assets/img/logo/favicon.png" type="image/x-icon" />
+  <style>
+    :root {
+      --primary: #2d488a;
+      --secondary: #71b9d3;
+      --bg-light: #f7fafc;
+      --text-dark: #2d3748;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #012e5e 0%, #000 60%);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--bg-light);
+    }
+    h2 {
+      color: var(--primary);
+      margin-top: 2rem;
+    }
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .tip {
+      background: #e6f0fa;
+      border-left: 4px solid var(--primary);
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .warning {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn-back:hover {
+      background: var(--secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>¿Cómo consultar Kardex en SIP5 WEB?</h1>
+  </header>
+
+  <main class="container">
+    <p>El Kardex te permite consultar el historial completo de movimientos de cualquier producto en tu inventario. Aquí te explicamos cómo utilizarlo.</p>
+
+    <h2>📊 ¿Qué es el Kardex?</h2>
+    <p>El Kardex es un registro detallado que muestra todos los movimientos de entrada y salida de un producto específico, incluyendo:</p>
+    <ul>
+      <li>Compras y recepciones</li>
+      <li>Ventas y despachos</li>
+      <li>Ajustes de inventario</li>
+      <li>Traslados entre sucursales</li>
+      <li>Devoluciones</li>
+    </ul>
+
+    <h2>🔍 Acceder al Kardex</h2>
+    <ul>
+      <li>Ve al menú <strong>Inventario</strong> o <strong>Reportes</strong>.</li>
+      <li>Selecciona <strong>Kardex</strong> o <strong>Movimientos de Producto</strong>.</li>
+      <li>El sistema abrirá la pantalla de consulta.</li>
+    </ul>
+
+    <h2>🔎 Filtros de búsqueda</h2>
+    <ul>
+      <li><strong>Producto:</strong> Busca por código o nombre del producto.</li>
+      <li><strong>Rango de fechas:</strong> Define el período a consultar.</li>
+      <li><strong>Tipo de movimiento:</strong> Filtra por entradas, salidas o todos.</li>
+      <li><strong>Sucursal:</strong> Si manejas múltiples ubicaciones.</li>
+      <li><strong>Usuario:</strong> Movimientos realizados por un usuario específico.</li>
+    </ul>
+
+    <div class="tip">
+      <strong>💡 Consejos de búsqueda:</strong>
+      <ul>
+        <li>Para productos específicos, usa el código exacto para mayor precisión.</li>
+        <li>Limita el rango de fechas para consultas más rápidas.</li>
+        <li>Usa filtros múltiples para análisis detallados.</li>
+      </ul>
+    </div>
+
+    <h2>📋 Información que muestra el Kardex</h2>
+    
+    <h3>📅 Datos del movimiento</h3>
+    <ul>
+      <li><strong>Fecha y hora:</strong> Cuándo se realizó el movimiento.</li>
+      <li><strong>Tipo:</strong> Entrada, salida, ajuste, traslado.</li>
+      <li><strong>Documento:</strong> Factura, recibo, nota de ajuste.</li>
+      <li><strong>Referencia:</strong> Número del documento o transacción.</li>
+    </ul>
+
+    <h3>📊 Cantidades</h3>
+    <ul>
+      <li><strong>Cantidad entrada:</strong> Productos que ingresaron.</li>
+      <li><strong>Cantidad salida:</strong> Productos que salieron.</li>
+      <li><strong>Saldo:</strong> Existencia después del movimiento.</li>
+      <li><strong>Costo unitario:</strong> Precio del producto en ese momento.</li>
+    </ul>
+
+    <h3>👤 Información adicional</h3>
+    <ul>
+      <li><strong>Usuario:</strong> Quién realizó la transacción.</li>
+      <li><strong>Cliente/Proveedor:</strong> Con quién se hizo la operación.</li>
+      <li><strong>Observaciones:</strong> Notas adicionales del movimiento.</li>
+    </ul>
+
+    <h2>📈 Análisis con Kardex</h2>
+    
+    <h3>🔍 Detectar irregularidades</h3>
+    <ul>
+      <li>Revisa movimientos inusuales o fuera de horarios normales.</li>
+      <li>Identifica diferencias entre entradas y salidas registradas.</li>
+      <li>Verifica ajustes de inventario frecuentes.</li>
+    </ul>
+
+    <h3>📊 Análisis de rotación</h3>
+    <ul>
+      <li>Identifica productos de alta y baja rotación.</li>
+      <li>Calcula velocidad de movimiento de inventario.</li>
+      <li>Determina patrones de demanda estacional.</li>
+    </ul>
+
+    <div class="warning">
+      <strong>⚠️ Verificaciones importantes:</strong>
+      <ul>
+        <li>El saldo final debe coincidir con el inventario actual.</li>
+        <li>Todos los movimientos deben tener documentos de respaldo.</li>
+        <li>Los ajustes deben estar debidamente justificados.</li>
+      </ul>
+    </div>
+
+    <h2>📄 Exportar y reportes</h2>
+    <ul>
+      <li><strong>Excel:</strong> Exporta para análisis más detallados.</li>
+      <li><strong>PDF:</strong> Para presentaciones o archivo.</li>
+      <li><strong>Imprimir:</strong> Copia física del reporte.</li>
+      <li><strong>Enviar por email:</strong> Compartir con otros usuarios.</li>
+    </ul>
+
+    <h2>🕐 Períodos recomendados</h2>
+    <ul>
+      <li><strong>Diario:</strong> Para control de movimientos del día.</li>
+      <li><strong>Semanal:</strong> Análisis de tendencias recientes.</li>
+      <li><strong>Mensual:</strong> Revisión periódica de inventarios.</li>
+      <li><strong>Anual:</strong> Para análisis de rotación y tendencias.</li>
+    </ul>
+
+    <h2>🔧 Solución de problemas comunes</h2>
+    <ul>
+      <li><strong>No aparecen movimientos:</strong> Verifica los filtros de fecha y producto.</li>
+      <li><strong>Saldos incorrectos:</strong> Puede haber ajustes no contabilizados.</li>
+      <li><strong>Movimientos duplicados:</strong> Revisa si hay errores en el registro.</li>
+      <li><strong>Fechas incorrectas:</strong> Verifica la configuración de zona horaria.</li>
+    </ul>
+
+    <h2>📚 Usos prácticos del Kardex</h2>
+    <ul>
+      <li><strong>Auditorías:</strong> Respaldar movimientos de inventario.</li>
+      <li><strong>Control de mermas:</strong> Identificar pérdidas no justificadas.</li>
+      <li><strong>Planificación:</strong> Determinar patrones de compra.</li>
+      <li><strong>Costeo:</strong> Calcular costos promedio de productos.</li>
+    </ul>
+
+    <a href="../faqs.html" class="btn-back">← Volver a Preguntas Frecuentes</a>
+  </main>
+
+</body>
+</html>

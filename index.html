@@ -434,10 +434,34 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height .3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+
+      nav a {
+        color: var(--text-dark) !important;
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid #f0f0f0;
+        display: block;
+      }
+
+      nav a:hover {
+        background: var(--bg-light);
+        color: var(--primary) !important;
       }
 
       body.dark nav {
         background: #000000;
+        box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+      }
+
+      body.dark nav a {
+        color: var(--text-dark) !important;
+        border-bottom: 1px solid #333;
+      }
+
+      body.dark nav a:hover {
+        background: #111;
+        color: var(--secondary) !important;
       }
 
       nav.open {
@@ -446,7 +470,11 @@
 
       nav ul {
         flex-direction: column;
-        padding: 1rem;
+        padding: 0;
+      }
+
+      nav li {
+        margin: 0;
       }
 
       .menu-toggle {

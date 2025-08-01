@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Cómo cerrar turno en SIP5 WEB? | FAQ ESG</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+  <link rel="shortcut icon" href="../assets/img/logo/favicon.png" type="image/x-icon" />
+  <style>
+    :root {
+      --primary: #2d488a;
+      --secondary: #71b9d3;
+      --bg-light: #f7fafc;
+      --text-dark: #2d3748;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #012e5e 0%, #000 60%);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--bg-light);
+    }
+    h2 {
+      color: var(--primary);
+      margin-top: 2rem;
+    }
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .tip {
+      background: #e6f0fa;
+      border-left: 4px solid var(--primary);
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .warning {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn-back:hover {
+      background: var(--secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>¿Cómo cerrar turno en SIP5 WEB?</h1>
+  </header>
+
+  <main class="container">
+    <p>El cierre de turno es crucial para el control diario de ventas y caja. Sigue estos pasos para cerrar correctamente un turno en SIP5 WEB.</p>
+
+    <h2>🏁 Preparación para el cierre</h2>
+    <ul>
+      <li>Asegúrate de que todas las ventas del día estén registradas.</li>
+      <li>Verifica que no haya transacciones pendientes.</li>
+      <li>Cuenta el dinero físico en caja.</li>
+      <li>Ten a mano todos los comprobantes del día.</li>
+    </ul>
+
+    <h2>📊 Acceder al cierre de turno</h2>
+    <ul>
+      <li>Ve al menú <strong>Caja</strong> o <strong>Turnos</strong>.</li>
+      <li>Selecciona <strong>"Cerrar Turno"</strong>.</li>
+      <li>El sistema mostrará el resumen del turno actual.</li>
+    </ul>
+
+    <h2>💰 Arqueo de caja</h2>
+    <ul>
+      <li><strong>Efectivo inicial:</strong> Cantidad con la que se aperturó.</li>
+      <li><strong>Ingresos en efectivo:</strong> Total de ventas en efectivo.</li>
+      <li><strong>Egresos:</strong> Gastos o retiros realizados.</li>
+      <li><strong>Efectivo teórico:</strong> Lo que debería haber en caja.</li>
+      <li><strong>Efectivo real:</strong> Lo que realmente hay (debes contarlo).</li>
+    </ul>
+
+    <div class="tip">
+      <strong>💡 Para un arqueo exacto:</strong>
+      <ul>
+        <li>Cuenta el dinero dos veces para evitar errores.</li>
+        <li>Separa billetes y monedas por denominación.</li>
+        <li>Incluye cheques y vouchers de tarjetas.</li>
+      </ul>
+    </div>
+
+    <h2>📋 Resumen de ventas</h2>
+    <ul>
+      <li><strong>Total de ventas:</strong> Suma de todas las transacciones.</li>
+      <li><strong>Ventas por forma de pago:</strong> Efectivo, tarjetas, cheques.</li>
+      <li><strong>Número de transacciones:</strong> Cantidad de ventas realizadas.</li>
+      <li><strong>Ticket promedio:</strong> Venta promedio por transacción.</li>
+    </ul>
+
+    <h2>🎫 Control de documentos</h2>
+    <ul>
+      <li><strong>Facturas emitidas:</strong> Desde qué número hasta cuál.</li>
+      <li><strong>Documentos anulados:</strong> Lista de facturas anuladas.</li>
+      <li><strong>Series utilizadas:</strong> Qué series se usaron.</li>
+      <li><strong>Próximo correlativo:</strong> Número que seguirá el próximo turno.</li>
+    </ul>
+
+    <div class="warning">
+      <strong>⚠️ Verificaciones importantes:</strong>
+      <ul>
+        <li>No debe haber saltos en la numeración de facturas.</li>
+        <li>Los documentos anulados deben estar justificados.</li>
+        <li>El efectivo real debe coincidir con el teórico.</li>
+      </ul>
+    </div>
+
+    <h2>📈 Análisis de diferencias</h2>
+    <ul>
+      <li><strong>Diferencia en caja:</strong> Sobrante o faltante de efectivo.</li>
+      <li><strong>Causas comunes:</strong> Errores en cambio, devoluciones no registradas.</li>
+      <li><strong>Documentar diferencias:</strong> Anota la razón de cualquier diferencia.</li>
+      <li><strong>Límites aceptables:</strong> Define un margen mínimo de diferencia.</li>
+    </ul>
+
+    <h2>💳 Conciliación de pagos</h2>
+    <ul>
+      <li><strong>Tarjetas de crédito/débito:</strong> Compara con vouchers físicos.</li>
+      <li><strong>Cheques recibidos:</strong> Verifica nombres y fechas.</li>
+      <li><strong>Transferencias:</strong> Confirma que se hayan recibido.</li>
+      <li><strong>Créditos otorgados:</strong> Lista de ventas a crédito.</li>
+    </ul>
+
+    <h2>📄 Imprimir reportes</h2>
+    <ul>
+      <li><strong>Reporte de cierre:</strong> Resumen completo del turno.</li>
+      <li><strong>Detalle de ventas:</strong> Lista individual de transacciones.</li>
+      <li><strong>Arqueo de caja:</strong> Estado del efectivo.</li>
+      <li><strong>Control fiscal:</strong> Para presentar a autoridades si es requerido.</li>
+    </ul>
+
+    <h2>✅ Confirmar el cierre</h2>
+    <ul>
+      <li>Revisa todos los datos antes de confirmar.</li>
+      <li>Documenta cualquier observación importante.</li>
+      <li>Haz clic en <strong>"Cerrar Turno"</strong> o <strong>"Confirmar Cierre"</strong>.</li>
+      <li>El sistema bloqueará el turno (no se puede modificar).</li>
+    </ul>
+
+    <h2>🗂️ Tareas posteriores al cierre</h2>
+    <ul>
+      <li><strong>Archivar reportes:</strong> Guarda todos los reportes impresos.</li>
+      <li><strong>Depositar efectivo:</strong> Si corresponde, prepara depósito bancario.</li>
+      <li><strong>Respaldar información:</strong> Asegura que los datos estén respaldados.</li>
+      <li><strong>Preparar próximo turno:</strong> Deja todo listo para el siguiente día.</li>
+    </ul>
+
+    <h2>❌ Problemas comunes</h2>
+    <ul>
+      <li><strong>Diferencia en caja:</strong> Busca errores en cambios o ventas no registradas.</li>
+      <li><strong>Documentos faltantes:</strong> Revisa que no haya facturas sin imprimir.</li>
+      <li><strong>Error en totales:</strong> Verifica las ventas anuladas o modificadas.</li>
+      <li><strong>No se puede cerrar:</strong> Puede haber transacciones pendientes.</li>
+    </ul>
+
+    <h2>📅 Mejores prácticas</h2>
+    <ul>
+      <li>Cierra el turno al final de cada jornada.</li>
+      <li>No dejes turnos abiertos por varios días.</li>
+      <li>Mantén un registro físico de arqueos.</li>
+      <li>Capacita a todo el personal en el proceso.</li>
+    </ul>
+
+    <a href="../faqs.html" class="btn-back">← Volver a Preguntas Frecuentes</a>
+  </main>
+
+</body>
+</html>
