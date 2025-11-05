@@ -110,6 +110,69 @@
       color: var(--secondary);
     }
 
+    /* Dropdown menu styles */
+    nav ul li {
+      position: relative;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      min-width: 200px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 4px;
+      padding: 0.5rem 0;
+      list-style: none;
+      z-index: 1001;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li {
+      margin: 0;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      color: var(--text-dark) !important;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+      background: var(--bg-light);
+      color: var(--primary) !important;
+    }
+
+    body.dark .dropdown-menu {
+      background: #1a1a1a;
+      box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+    }
+
+    body.dark .dropdown-menu a {
+      color: var(--text-dark) !important;
+    }
+
+    body.dark .dropdown-menu a:hover {
+      background: #2a2a2a;
+      color: var(--secondary) !important;
+    }
+
+    .dropdown > a::after {
+      content: ' ▾';
+      font-size: 0.8em;
+    }
+
     .menu-toggle {
       display: none;
       cursor: pointer;
@@ -465,7 +528,7 @@
       }
 
       nav.open {
-        max-height: 300px;
+        max-height: 500px;
       }
 
       nav ul {
@@ -475,6 +538,34 @@
 
       nav li {
         margin: 0;
+      }
+
+      /* Dropdown mobile styles */
+      .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+      }
+
+      .dropdown.open .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-menu a {
+        padding-left: 2rem;
+        font-size: 0.9rem;
+      }
+
+      .dropdown > a::after {
+        content: ' ▾';
+        transition: transform 0.3s;
+      }
+
+      .dropdown.open > a::after {
+        transform: rotate(180deg);
+        display: inline-block;
       }
 
       .menu-toggle {
@@ -587,11 +678,16 @@
       <nav id="nav">
         <ul>
           <li><a href="#home">Inicio</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#about">Sobre Nosotros</a></li>
-          <li><a href="#portfolio">Portafolio</a></li>
-          <li><a href="#testimonials">Testimonios</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li class="dropdown">
+            <a href="#sistemas">Sistemas</a>
+            <ul class="dropdown-menu">
+              <li><a href="#control">Control</a></li>
+              <li><a href="#sicf4">SICF4 Web</a></li>
+              <li><a href="#sip5">Sip5 Web</a></li>
+            </ul>
+          </li>
+          <li><a href="#demos">Demos</a></li>
+          <li><a href="#ayuda">Ayuda</a></li>
             <li>
             <a href="https://wa.me/50238339762?text=Hola%2C%20quiero%20contactar%20con%20servicio%20al%20cliente%20de%20E-Sistemas%20Globales"
                target="_blank" rel="noopener"
@@ -1113,6 +1209,31 @@
     const menuToggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('nav');
     menuToggle.addEventListener('click', () => nav.classList.toggle('open'));
+
+    /* ---------- Dropdown móvil ---------- */
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdowns = document.querySelectorAll('.dropdown');
+
+      dropdowns.forEach(dropdown => {
+        const dropdownLink = dropdown.querySelector('a');
+
+        dropdownLink.addEventListener('click', function(e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle('open');
+          }
+        });
+      });
+
+      // Cerrar dropdowns al redimensionar ventana
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+          dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('open');
+          });
+        }
+      });
+    });
 
     /* ---------- Scroll suave ---------- */
     function scrollToSection(id) {
